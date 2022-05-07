@@ -7,7 +7,7 @@ public abstract class Card {
 	private float defense;
 	private Ability ability;
 	private int hitRange;
-	//summon type?
+	//summon type?.
 	private int moveRange;
 	
 	public abstract boolean canSummon();
