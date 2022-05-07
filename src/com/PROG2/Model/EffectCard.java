@@ -1,4 +1,4 @@
 package com.PROG2.Model;
 
-public class Card {
+public class EffectCard {
 }
