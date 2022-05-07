@@ -7,7 +7,7 @@ public abstract class Card {
 	private float defense;
 	private Ability ability;
 	private int hitRange;
-	//summon type, vielleicht als enum?
+	//summon type, vielleicht als enum?.
 	private int moveRange;
 	
 	public abstract boolean canSummon();
