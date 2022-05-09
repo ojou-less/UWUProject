@@ -12,7 +12,7 @@ public class Player {
     private ClassTypes classesType;
     private int drawLimit;
     private Deck cards;
-    private ObservableList<Ability> abbilities;
+    private ObservableList<Ability> abilities;
 
 
 }
