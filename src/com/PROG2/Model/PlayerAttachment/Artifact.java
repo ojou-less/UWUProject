@@ -1,2 +1,4 @@
-package com.PROG2.Model.PlayerAttachment;public class Artifact {
+package com.PROG2.Model.PlayerAttachment;
+
+public class Artifact {
 }
