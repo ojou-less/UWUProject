@@ -8,6 +8,11 @@ public class Deck {
     private ObservableList<EffectCard> effectCards;
     private ObservableList<SummonedWarriorCard> summonedWarriorCards;
 
+    public EffectCard draweffect(){
+
+        effectCards.get()
+
+    }
 
 
 }
