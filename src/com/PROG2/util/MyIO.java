@@ -19,6 +19,8 @@ public class MyIO {
         System.out.println(arg);
        
     }
-    public static
+    public static int random(){
+        return 0;
+    }
 
 }

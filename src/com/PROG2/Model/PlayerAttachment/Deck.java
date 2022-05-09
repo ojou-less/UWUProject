@@ -10,8 +10,8 @@ public class Deck {
 
     public EffectCard draweffect(){
 
-        effectCards.get()
-
+        effectCards.get(0);
+return null;
     }
 
 
