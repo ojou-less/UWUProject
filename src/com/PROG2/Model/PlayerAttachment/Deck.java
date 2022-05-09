@@ -15,4 +15,24 @@ public class Deck {
     public SummonedWarriorCard drawSummon(){
         return summonedWarriorCards.get((random(0,99999999)%(summonedWarriorCards.size()-1)));
     }
+
+    public void add(EffectCard addedCard){
+        effectCards.add(addedCard);
+    }
+    public void add(SummonedWarriorCard addedCard){
+        summonedWarriorCards.add(addedCard);
+    }
+
+    public ObservableList<EffectCard> getEffectCards() {
+        return effectCards;
+    }
+
+    public ObservableList<SummonedWarriorCard> getSummonedWarriorCards() {
+        return summonedWarriorCards;
+    }
+
+    public void removeEffect(EffectCard e){
+        effectCards.remove(effectCards.indexOf(e));
+    }
+
 }
