@@ -19,8 +19,9 @@ public class MyIO {
         System.out.println(arg);
        
     }
-    public static int random(){
-        return 0;
+    public static int random(int min,int max){
+        Random rn = new Random();
+        return rn.nextInt(max-min+1)+min;
     }
 
 }
