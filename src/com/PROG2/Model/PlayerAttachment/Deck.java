@@ -13,8 +13,6 @@ public class Deck {
         return effectCards.get((random(0,99999999)%(effectCards.size()-1)));
     }
     public SummonedWarriorCard drawSummon(){
-        return summonedWarriorCards.get((random(0,99999999)%(effectCards.size()-1)));
+        return summonedWarriorCards.get((random(0,99999999)%(summonedWarriorCards.size()-1)));
     }
-
-
 }
