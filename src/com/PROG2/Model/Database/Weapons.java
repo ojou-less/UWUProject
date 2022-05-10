@@ -7,8 +7,8 @@ import javafx.collections.ObservableList;
 public class Weapons {
     private ObservableList<Weapon> weapons = FXCollections.emptyObservableList();
 
-    public Weapons(ObservableList<Weapon> weapons) {
-        this.weapons = weapons;
+    public Weapons() {
+        ;
     }
 
     public ObservableList<Weapon> weapons() {
@@ -19,11 +19,11 @@ public class Weapons {
         return this.weapons().get(i);
     }
 
-    public Weapons setWeapons(ObservableList<Weapon> weapons) {
+    public Armors setWeapons(ObservableList<Weapon> weapons) {
         this.weapons = weapons;
         return this;
     }
-    public Weapons add(Weapon weapon){
+    public Armors add(Weapon weapon){
         weapons.add(weapon);
         return this;
     }

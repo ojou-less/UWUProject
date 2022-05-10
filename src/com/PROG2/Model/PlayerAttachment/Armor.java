@@ -1,15 +1,18 @@
 package com.PROG2.Model.PlayerAttachment;
 
-public class Armor {
+import com.PROG2.Model.Database.Useable;
+
+public class Armor extends Useable {
     private double health;
     private double addHealth = 0;
 
-    public Armor(double health) {
+    public Armor(double health,int ID) {
+        super(ID);
         this.health = health;
     }
 
     public double health() {
-        return health;
+        return health+this.addHealth();
     }
 
     public Armor setHealth(double health) {

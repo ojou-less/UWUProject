@@ -8,8 +8,8 @@ import javafx.collections.ObservableList;
 public class StartDecks {
     private ObservableList<Deck> decks = FXCollections.observableArrayList();
 
-    public StartDecks(ObservableList<Deck> decks) {
-        this.decks = decks;
+    public StartDecks() {
+
     }
 
     public ObservableList<Deck> decks() {

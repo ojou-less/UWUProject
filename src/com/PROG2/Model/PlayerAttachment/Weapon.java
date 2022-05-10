@@ -1,6 +1,8 @@
 package com.PROG2.Model.PlayerAttachment;
 
 
+import com.PROG2.Model.Database.Useable;
+
 /** To-Do-List:
  *  Methode herstellen für Waffen und Eigenschaften einzelnen Waffen
  *  .json für neue Methode
@@ -12,7 +14,7 @@ package com.PROG2.Model.PlayerAttachment;
  *
  */
 
-public class Weapon {
+public class Weapon extends Useable {
     //----------------------------Attributes----------------------------
     //: External classes
     private Player player;
@@ -20,6 +22,11 @@ public class Weapon {
 
     //: Main attribute
     private String weaponName;
+
+    public Weapon(int ID) {
+        super(ID);
+    }
+
     private enum weaponType {SWORD, BOW, SPEAR, AXE, CLUB,};
     private int weaponLevel;
 

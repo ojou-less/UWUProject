@@ -1,11 +1,12 @@
 package com.PROG2.Model.Cards;
 
+import com.PROG2.Model.Database.Useable;
 import com.PROG2.Model.PlayerAttachment.Ability;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class SummonedWarriorCard {
-    private int ID;
+public class SummonedWarriorCard extends Useable {
+
     private double health;
     private double hitDamage;
     private double defense;
@@ -15,7 +16,7 @@ public class SummonedWarriorCard {
     private final boolean canSummon;
 
     public SummonedWarriorCard(int ID, double health, double hitDamage, double defense, int hitRange, int moveRange, boolean canSummon) {
-        this.ID = ID;
+        super(ID);
         this.health = health;
         this.hitDamage = hitDamage;
         this.defense = defense;
@@ -31,14 +32,6 @@ public class SummonedWarriorCard {
     private SummonedWarriorCard active(Ability ability){
         this.health += (this.health() * ability.increaseHealth());
         this.hitDamage += (this.hitDamage() * ability.increaseDamage());
-        return this;
-    }
-    public int ID() {
-        return ID;
-    }
-
-    public SummonedWarriorCard setID(int ID) {
-        this.ID = ID;
         return this;
     }
 

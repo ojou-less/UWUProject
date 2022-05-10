@@ -1,8 +1,10 @@
 package com.PROG2.Model.PlayerAttachment;
 
-public class Ability {
+import com.PROG2.Model.Database.Useable;
 
-    private int ID;
+public class Ability extends Useable {
+
+
     private int timer;//roundTimer
     private String name;
     private String iconPath;
@@ -13,7 +15,7 @@ public class Ability {
     private double increaseArmor;
     private int increaseDrawLimit;
     public Ability(int ID, int timer, String name, String iconPath, double increaseHealth, double increaseMana, double increaseDamage, double increaseArmor, int increaseDrawLimit) {
-        this.ID = ID;
+        super(ID);
         this.timer = timer;
         this.name = name;
         this.iconPath = iconPath;

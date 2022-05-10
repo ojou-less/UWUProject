@@ -1,4 +1,9 @@
 package com.PROG2.Model.PlayerAttachment;
 
-public class Artifact {
+import com.PROG2.Model.Database.Useable;
+
+public class Artifact extends Useable {
+    public Artifact(int ID) {
+        super(ID);
+    }
 }

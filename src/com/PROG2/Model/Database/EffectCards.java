@@ -7,8 +7,7 @@ import javafx.collections.ObservableList;
 public class EffectCards {
     private ObservableList<EffectCard> effectCards = FXCollections.observableArrayList();
 
-    public EffectCards(ObservableList<EffectCard> effectCards) {
-        this.effectCards = effectCards;
+    public EffectCards() {
     }
 
     public ObservableList<EffectCard> effectCards() {

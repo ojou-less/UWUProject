@@ -7,8 +7,7 @@ import javafx.collections.ObservableList;
 public class Artifacts {
     private ObservableList<Artifact> artifacts = FXCollections.observableArrayList();
 
-    public Artifacts(ObservableList<Artifact> artifacts) {
-        this.artifacts = artifacts;
+    public Artifacts() {
     }
 
     public ObservableList<Artifact> artifacts() {

@@ -7,8 +7,7 @@ import javafx.collections.ObservableList;
 public class WarriorCards {
     private ObservableList<SummonedWarriorCard> warriorCards = FXCollections.emptyObservableList();
 
-    public WarriorCards(ObservableList<SummonedWarriorCard> warriorCards) {
-        this.warriorCards = warriorCards;
+    public WarriorCards() {
     }
 
     public ObservableList<SummonedWarriorCard> warriorCards() {
