@@ -1,6 +1,6 @@
 package com.PROG2.Model.Cards;
 
-import com.PROG2.Model.Ability;
+import com.PROG2.Model.PlayerAttachment.Ability;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
