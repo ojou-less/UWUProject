@@ -1,16 +1,9 @@
 package com.PROG2.Model.PlayerAttachment;
 
-import com.PROG2.Model.EffectCard;
-import com.PROG2.Model.SummonedWarriorCard;
-import javafx.beans.InvalidationListener;
+import com.PROG2.Model.Cards.EffectCard;
+import com.PROG2.Model.Cards.SummonedWarriorCard;
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
-
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
 import static com.PROG2.util.MyIO.*;
 

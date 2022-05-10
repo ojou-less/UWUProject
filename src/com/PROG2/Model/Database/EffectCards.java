@@ -1,7 +1,6 @@
 package com.PROG2.Model.Database;
 
-import com.PROG2.Model.EffectCard;
-import com.PROG2.Model.PlayerAttachment.Deck;
+import com.PROG2.Model.Cards.EffectCard;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

@@ -1,7 +1,6 @@
 package com.PROG2.Model.Database;
 
-import com.PROG2.Model.PlayerAttachment.Weapon;
-import com.PROG2.Model.SummonedWarriorCard;
+import com.PROG2.Model.Cards.SummonedWarriorCard;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

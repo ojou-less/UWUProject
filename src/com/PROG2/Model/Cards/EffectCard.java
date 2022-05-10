@@ -1,4 +1,6 @@
-package com.PROG2.Model;
+package com.PROG2.Model.Cards;
+
+import com.PROG2.Model.Ability;
 
 public class EffectCard {
     private int ID;

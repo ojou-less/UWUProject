@@ -1,14 +1,8 @@
-package com.PROG2.Model;
+package com.PROG2.Model.Cards;
 
-import javafx.beans.InvalidationListener;
+import com.PROG2.Model.Ability;
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
-
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
 public class SummonedWarriorCard {
     private int ID;
