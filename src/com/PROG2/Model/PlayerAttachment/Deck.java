@@ -2,12 +2,22 @@ package com.PROG2.Model.PlayerAttachment;
 
 import com.PROG2.Model.EffectCard;
 import com.PROG2.Model.SummonedWarriorCard;
+import javafx.beans.InvalidationListener;
+import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
 import static com.PROG2.util.MyIO.*;
 
 public class Deck {
-    private ObservableList<EffectCard> effectCards;
-    private ObservableList<SummonedWarriorCard> summonedWarriorCards;
+    private final ObservableList<EffectCard> effectCards = FXCollections.observableArrayList();
+    private final ObservableList<SummonedWarriorCard> summonedWarriorCards = FXCollections.observableArrayList();
+
 
     public EffectCard draweffect(){
         return effectCards.get((random(0,99999999)%(effectCards.size()-1)));

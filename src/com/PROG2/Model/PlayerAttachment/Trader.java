@@ -1,13 +1,14 @@
 package com.PROG2.Model.PlayerAttachment;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Trader {
     private Weapon weapon;
     private Deck cards;
-    private ObservableList<Artifact> artifactsForSale;
-    private ObservableList<Weapon> weaponsForSale;
-    private ObservableList<Deck> cardsForSale;
+    private ObservableList<Artifact> artifactsForSale = FXCollections.observableArrayList();
+    private ObservableList<Weapon> weaponsForSale = FXCollections.observableArrayList();
+    private ObservableList<Deck> cardsForSale =FXCollections.observableArrayList();
     private int[][] posOnDungeonMap; //nullable
 
     public ObservableList<Weapon> getWeaponsForSale(){

@@ -2,16 +2,18 @@ package com.PROG2.Model;
 
 public class Ability {
 
-
-    private int timer;
+    private int ID;
+    private int timer;//roundTimer
     private String name;
     private String iconPath;
+    //increase in percent 0.XX
     private double increaseHealth;
     private double increaseMana;
     private double increaseDamage;
     private double increaseArmor;
     private int increaseDrawLimit;
-    public Ability(int timer, String name, String iconPath, double increaseHealth, double increaseMana, double increaseDamage, double increaseArmor, int increaseDrawLimit) {
+    public Ability(int ID, int timer, String name, String iconPath, double increaseHealth, double increaseMana, double increaseDamage, double increaseArmor, int increaseDrawLimit) {
+        this.ID = ID;
         this.timer = timer;
         this.name = name;
         this.iconPath = iconPath;
