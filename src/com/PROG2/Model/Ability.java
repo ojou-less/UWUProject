@@ -32,6 +32,10 @@ public class Ability {
         this.timer = timer;
         return this;
     }
+    public Ability countAbility(){
+        this.timer--;
+        return this;
+    }
 
     public String name() {
         return name;

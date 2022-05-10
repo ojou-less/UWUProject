@@ -108,6 +108,17 @@ public class Player {
         abilities.add(ability);
         return this;
     }
+    public Player checkEffects(){
+        for (Ability ability:
+                abilities) {
+            if(ability.timer()==0){
+                this.abilities.remove(ability);
+            }else {
+                ability = ability.countAbility();
+            }
+        }
+        return this;
+    }
     public Player setAbilities(ObservableList<Ability> abilities) {
         this.abilities = abilities;
         return this;
