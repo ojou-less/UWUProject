@@ -25,6 +25,12 @@ public class SummonedWarriorCard {
     }
     public SummonedWarriorCard addeffect(Ability ability){
         abilities.add(ability);
+        this.active(ability);
+        return this;
+    }
+    private SummonedWarriorCard active(Ability ability){
+        this.health += (this.health() * ability.increaseHealth());
+        this.hitDamage += (this.hitDamage() * ability.increaseDamage());
         return this;
     }
     public int ID() {
