@@ -1,5 +1,6 @@
 package com.PROG2.Model.Events;
 
+import com.PROG2.util.MyIO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -8,11 +9,10 @@ import java.util.Random;
 public class GameEvent {
 
     private ObservableList<Trader> trader = FXCollections.observableArrayList();
-    private int upperbound = 3;
+    private int maxEventAmount = 3;
 
     public void randomEvent(){
-        Random randNum = new Random();
-        int randy = randNum.nextInt(upperbound);
+        int randy = MyIO.random(1, 3);
 
         switch(randy){
             case 1: System.out.println("event 1");
