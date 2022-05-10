@@ -1,4 +1,5 @@
 package com.PROG2.Model;
 
-public class Ability {
+public class Ability
+{//Moin
 }
