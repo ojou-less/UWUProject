@@ -1,8 +1,8 @@
 package com.PROG2.Model.PlayerAttachment;
 
 import com.PROG2.Model.Ability;
-//import javafx.collections.ObservableList;
-//mein plugin funktioniert nicht
+import javafx.collections.ObservableList;
+
 
 public class DungeonMaster {
     private double level;
@@ -13,7 +13,7 @@ public class DungeonMaster {
     private ClassTypes classesTypes;
     private int drawLimit;
     private Deck cards;
-    //private ObservableList<Ability> abilities;
+    private ObservableList<Ability> abilities;
     private int zen;
 
 
@@ -82,13 +82,13 @@ public class DungeonMaster {
         this.cards = cards;
     }
 
-//    public ObservableList<Ability> getAbilities() {
-//        return abilities;
-//    }
-//
-//    public void setAbilities(ObservableList<Ability> abilities) {
-//        this.abilities = abilities;
-//    }
+    public ObservableList<Ability> getAbilities() {
+        return abilities;
+    }
+
+    public void setAbilities(ObservableList<Ability> abilities) {
+        this.abilities = abilities;
+    }
 
     public int getZen() {
         return zen;
