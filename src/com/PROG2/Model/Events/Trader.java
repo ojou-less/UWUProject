@@ -1,5 +1,8 @@
-package com.PROG2.Model.PlayerAttachment;
+package com.PROG2.Model.Events;
 
+import com.PROG2.Model.PlayerAttachment.Artifact;
+import com.PROG2.Model.PlayerAttachment.Deck;
+import com.PROG2.Model.PlayerAttachment.Weapon;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
