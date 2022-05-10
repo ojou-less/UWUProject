@@ -21,5 +21,5 @@ public class Trader {
     }
     //setter für for sale random...?
     //position auf der map auch...?
-    //hallo ayham
+    //hallo ayham.
 }
