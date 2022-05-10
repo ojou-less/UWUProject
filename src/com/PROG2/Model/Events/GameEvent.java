@@ -11,6 +11,11 @@ public class GameEvent {
     private ObservableList<Trader> trader = FXCollections.observableArrayList();
     private int maxEventAmount = 3;
 
+    public GameEvent(ObservableList<Trader> trader, int maxEventAmount) {
+        this.trader = trader;
+        this.maxEventAmount = maxEventAmount;
+    }
+
     public void randomEvent(){
         int randy = MyIO.random(1, 3);
 
