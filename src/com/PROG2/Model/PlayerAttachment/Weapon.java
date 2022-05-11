@@ -3,6 +3,8 @@ package com.PROG2.Model.PlayerAttachment;
 
 import com.PROG2.Model.Database.Useable;
 
+import java.util.Random;
+
 /** To-Do-List:
  *  Methode herstellen für Waffen und Eigenschaften einzelnen Waffen
  *  .json für neue Methode
@@ -17,28 +19,26 @@ public class Weapon extends Useable {
     private Player player;
     private DungeonMaster dungeonMaster;
 
-    //: Main attribute
-    private String weaponName;
+    //: Main attribute ---------------------------
+    String weaponName;
+    private enum weaponType {SWORD, BOW, SPEAR, AXE, CLUB,};
+    int[] weaponLevel = {1, 2, 3}; //Wie in Spiel hat 3 Levels
+    //: Combat attribute -------------------------
+    double hitDamage;
+    private Random randomDamage;
+    //private double sideEffect;
+    //: Shop --------------------------
+    private int zen;
+    private double weaponPrice;
+    private double upgradePrice;
+    private final boolean[] hasWeapon = {false, true};
+    //: Simulation (Prüfen, ob die Waffen kaufen kann oder upgraden kann) (Ohne GUI)
+    private boolean purcharseWeaponAccepted;
+    private boolean canUpgradeWeapon;
 
     public Weapon(int ID) {
         super(ID);
     }
-
-    private enum weaponType {SWORD, BOW, SPEAR, AXE, CLUB,};
-    private int weaponLevel;
-
-    //: Combat attribute
-    private double hitDamage;
-    //private double sideEffect;
-
-    //: Shop
-    private int zen;
-    private double weaponPrice;
-    private double upgradePrice;
-
-    //: Simulation (Prüfen, ob die Waffen kaufen kann oder upgraden kann) (Ohne GUI)
-    private boolean purcharseWeaponAccepted;
-    private boolean canUpgradeWeapon;
 
     //--------------------------Getter & Setter----------------------------
     public String getWeaponName() {
@@ -48,10 +48,10 @@ public class Weapon extends Useable {
         this.weaponName = weaponName;
     }
 
-    public int getWeaponLevel() {
+    public int[] getWeaponLevel() {
         return weaponLevel;
     }
-    public void setWeaponLevel(int weaponLevel) {
+    public void setWeaponLevel(int[] weaponLevel) {
         this.weaponLevel = weaponLevel;
     }
 
@@ -86,9 +86,35 @@ public class Weapon extends Useable {
 
     //---------------------------Methods--------------------------------
 
-
-    public void purcharseWeapon(double weaponPrice) {
+    public void weaponHit(double hitDamage, int[] weaponLevel, Exception e) {
+        this.hitDamage = hitDamage;
+        this.weaponLevel = weaponLevel;
+        /* weaponHit: Die Waffen werden zufällige Damage verursachen, je höher der Waffenlevel ist
+         *  desto schädlicher die Waffen sind.
+         */
+        for (int i = 0; i <= weaponLevel.length; i++) {
+            if (i == 1) {
+                hitDamage = hitDamage * randomDamage.nextDouble(1, 1.6);
+            } else if (i == 2) {
+                hitDamage = hitDamage * randomDamage.nextDouble(2, 3.2);
+            } else if (i == 3) {
+                hitDamage = hitDamage * randomDamage.nextDouble(3, 5);
+            } else {
+                System.out.println("ERROR 1823: Weapon is corrupted, no level detected please " +
+                        "report this to our development team: ");
+                e.printStackTrace();
+            }
+        }
+    }
+    public void purcharseWeapon(double weaponPrice, int p) {
         this.weaponPrice = weaponPrice;
+
+        if (hasWeapon[p] = true) {
+            System.out.println("You have already purchased this weapon. Buy other weapon!");
+            return;
+        }
+
+
     }
 
     public void upgradeWeapon(double upgradePrice) {
