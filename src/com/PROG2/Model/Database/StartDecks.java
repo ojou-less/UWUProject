@@ -6,26 +6,26 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class StartDecks {
-    private ObservableList<Deck> decks = FXCollections.observableArrayList();
+    private static ObservableList<Deck> decks = FXCollections.observableArrayList();
 
     public StartDecks() {
 
     }
 
-    public ObservableList<Deck> decks() {
+    public static ObservableList<Deck> decks() {
         return decks;
     }
 
-    public Deck get(int i){
-        return this.decks().get(i);
+    public static Deck get(int i){
+        return StartDecks.decks().get(i);
     }
-    public StartDecks setDecks(ObservableList<Deck> decks) {
-        this.decks = decks;
-        return this;
+    public static StartDecks setDecks(ObservableList<Deck> decks) {
+        StartDecks.decks = decks;
+        return null;
     }
 
     public StartDecks add(Deck deck){
         decks.add(deck);
-        return this;
+        return null;
     }
 }

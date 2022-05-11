@@ -5,25 +5,25 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class WarriorCards {
-    private ObservableList<SummonedWarriorCard> warriorCards = FXCollections.emptyObservableList();
+    private static ObservableList<SummonedWarriorCard> warriorCards = FXCollections.emptyObservableList();
 
     public WarriorCards() {
     }
 
-    public ObservableList<SummonedWarriorCard> warriorCards() {
+    public static ObservableList<SummonedWarriorCard> warriorCards() {
         return warriorCards;
     }
 
-    public SummonedWarriorCard get(int i){
-        return this.warriorCards().get(i);
+    public static SummonedWarriorCard get(int i){
+        return WarriorCards.warriorCards().get(i);
     }
 
-    public WarriorCards setWarriorCards(ObservableList<SummonedWarriorCard> warriorCards) {
-        this.warriorCards = warriorCards;
-        return this;
+    public static WarriorCards setWarriorCards(ObservableList<SummonedWarriorCard> warriorCards) {
+        WarriorCards.warriorCards = warriorCards;
+        return null;
     }
-    public WarriorCards add(SummonedWarriorCard summonedWarriorCard){
+    public static WarriorCards add(SummonedWarriorCard summonedWarriorCard){
         warriorCards.add(summonedWarriorCard);
-        return this;
+        return null;
     }
 }

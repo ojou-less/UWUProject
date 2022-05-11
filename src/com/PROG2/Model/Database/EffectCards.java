@@ -5,26 +5,26 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class EffectCards {
-    private ObservableList<EffectCard> effectCards = FXCollections.observableArrayList();
+    private static ObservableList<EffectCard> effectCards = FXCollections.observableArrayList();
 
     public EffectCards() {
     }
 
-    public ObservableList<EffectCard> effectCards() {
+    public static ObservableList<EffectCard> effectCards() {
         return effectCards;
     }
 
-    public EffectCard get(int i){
-        return this.effectCards().get(i);
+    public static EffectCard get(int i){
+        return EffectCards.effectCards().get(i);
     }
 
-    public EffectCards setEffectCards(ObservableList<EffectCard> effectCards) {
-        this.effectCards = effectCards;
-        return this;
+    public static EffectCards setEffectCards(ObservableList<EffectCard> effectCards) {
+        EffectCards.effectCards = effectCards;
+        return null;
     }
 
-    public EffectCards add(EffectCard effectCard){
+    public static EffectCards add(EffectCard effectCard){
         effectCards.add(effectCard);
-        return this;
+        return null;
     }
 }

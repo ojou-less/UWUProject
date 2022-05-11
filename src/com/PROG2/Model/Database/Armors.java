@@ -6,27 +6,27 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Armors {
-    private ObservableList<Armor> armors = FXCollections.emptyObservableList();
+    private static ObservableList<Armor> armors = FXCollections.emptyObservableList();
 
     public Armors() {
         ;
     }
 
-    public ObservableList<Armor> armors() {
+    public static ObservableList<Armor> armors() {
         return armors;
     }
 
-    public Armor get(int i) {
-        return this.armors().get(i);
+    public static Armor get(int i) {
+        return Armors.armors().get(i);
     }
 
-    public Armors setArmors(ObservableList<Armor> armors) {
-        this.armors = armors;
-        return this;
+    public static Armors setArmors(ObservableList<Armor> armors) {
+        Armors.armors = armors;
+        return null;
     }
 
-    public Armors add(Armor armor) {
+    public static Armors add(Armor armor) {
         armors.add(armor);
-        return this;
+        return null;
     }
 }

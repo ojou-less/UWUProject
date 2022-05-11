@@ -5,25 +5,26 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Abilities {
-    private ObservableList<Ability> effectList = FXCollections.observableArrayList();
+    private static ObservableList<Ability> effectList = FXCollections.observableArrayList();
 
     public Abilities() {
     }
-    public Abilities addEffect(Ability ability){
+
+    public static Abilities addEffect(Ability ability){
         effectList.add(ability);
-        return this;
+        return null;
     }
-    public Ability get(int i){
-        return this.effectList().get(i);
+    public static Ability get(int i){
+        return Abilities.effectList().get(i);
     }
 
 
-    public ObservableList<Ability> effectList() {
+    public static ObservableList<Ability> effectList() {
         return effectList;
     }
 
-    public Abilities setEffectList(ObservableList<Ability> effectList) {
-        this.effectList = effectList;
-        return this;
+    public static Abilities setEffectList(ObservableList<Ability> effectList) {
+        Abilities.effectList = effectList;
+        return null;
     }
 }

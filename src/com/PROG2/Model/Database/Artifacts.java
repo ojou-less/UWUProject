@@ -5,25 +5,25 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Artifacts {
-    private ObservableList<Artifact> artifacts = FXCollections.observableArrayList();
+    private static ObservableList<Artifact> artifacts = FXCollections.observableArrayList();
 
     public Artifacts() {
     }
 
-    public ObservableList<Artifact> artifacts() {
+    public static ObservableList<Artifact> artifacts() {
         return artifacts;
     }
 
-    public Artifact get(int i){
-        return this.artifacts().get(i);
+    public static Artifact get(int i){
+        return Artifacts.artifacts().get(i);
     }
 
-    public Artifacts setArtifacts(ObservableList<Artifact> artifacts) {
-        this.artifacts = artifacts;
-        return this;
+    public static Artifacts setArtifacts(ObservableList<Artifact> artifacts) {
+        Artifacts.artifacts = artifacts;
+        return null;
     }
-    public Artifacts add(Artifact artifact){
+    public static Artifacts add(Artifact artifact){
         artifacts.add(artifact);
-        return this;
+        return null;
     }
 }

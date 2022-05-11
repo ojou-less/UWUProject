@@ -5,26 +5,26 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Weapons {
-    private ObservableList<Weapon> weapons = FXCollections.emptyObservableList();
+    private static ObservableList<Weapon> weapons = FXCollections.emptyObservableList();
 
     public Weapons() {
         ;
     }
 
-    public ObservableList<Weapon> weapons() {
+    public static ObservableList<Weapon> weapons() {
         return weapons;
     }
 
-    public Weapon get(int i){
-        return this.weapons().get(i);
+    public static Weapon get(int i){
+        return Weapons.weapons().get(i);
     }
 
-    public Armors setWeapons(ObservableList<Weapon> weapons) {
-        this.weapons = weapons;
-        return this;
+    public static Armors setWeapons(ObservableList<Weapon> weapons) {
+        Weapons.weapons = weapons;
+        return null;
     }
-    public Armors add(Weapon weapon){
+    public static Armors add(Weapon weapon){
         weapons.add(weapon);
-        return this;
+        return null;
     }
 }
