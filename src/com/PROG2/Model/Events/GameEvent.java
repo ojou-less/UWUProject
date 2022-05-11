@@ -17,7 +17,7 @@ public class GameEvent {
     }
 
     public void randomEvent(){
-        int randy = (MyIO.random(1, 999999999999999999999)%3) + 1 ;
+        int randy = (MyIO.random(1, 999999999)%3) + 1 ;
 
         switch(randy){
             case 1: System.out.println("event 1");
