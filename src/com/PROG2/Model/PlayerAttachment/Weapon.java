@@ -8,10 +8,7 @@ import com.PROG2.Model.Database.Useable;
  *  .json für neue Methode
  *  upgrade- und purcharseWeapon-Methode vollständigen
  *
- *  Ideen & feedback: (Wenn du Idee oder feedback hast für diese Klasse, kannst du unten in die Kommentare)
- *
- *
- *
+ * Git test
  */
 
 public class Weapon extends Useable {
