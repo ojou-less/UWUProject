@@ -1,11 +1,11 @@
 package com.PROG2.Model.Cards;
 
-import com.PROG2.Model.Database.Useable;
+import com.PROG2.Model.Database.Usable;
 import com.PROG2.Model.PlayerAttachment.Ability;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class SummonedWarriorCard extends Useable {
+public class SummonedWarriorCard extends Usable {
 
     private double health;
     private double hitDamage;

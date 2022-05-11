@@ -1,7 +1,7 @@
 package com.PROG2.Model.PlayerAttachment;
 
 
-import com.PROG2.Model.Database.Useable;
+import com.PROG2.Model.Database.Usable;
 
 import java.util.Random;
 
@@ -13,7 +13,7 @@ import java.util.Random;
  * Git test
  */
 
-public class Weapon extends Useable {
+public class Weapon extends Usable {
     //----------------------------Attributes----------------------------
     //: External classes
     private Player player;

@@ -1,8 +1,8 @@
 package com.PROG2.Model.PlayerAttachment;
 
-import com.PROG2.Model.Database.Useable;
+import com.PROG2.Model.Database.Usable;
 
-public class Ability extends Useable {
+public class Ability extends Usable {
 
 
     private int timer;//roundTimer

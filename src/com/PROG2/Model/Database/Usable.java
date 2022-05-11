@@ -1,9 +1,9 @@
 package com.PROG2.Model.Database;
 
-public class Useable {
+public class Usable {
     private int ID;
 
-    public Useable(int ID) {
+    public Usable(int ID) {
         this.ID = ID;
     }
 
@@ -11,7 +11,7 @@ public class Useable {
         return ID;
     }
 
-    public Useable setID(int ID) {
+    public Usable setID(int ID) {
         this.ID = ID;
         return this;
     }

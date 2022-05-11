@@ -1,8 +1,8 @@
 package com.PROG2.Model.PlayerAttachment;
 
-import com.PROG2.Model.Database.Useable;
+import com.PROG2.Model.Database.Usable;
 
-public class Armor extends Useable {
+public class Armor extends Usable {
     private double health;
     private double addHealth = 0;
 
