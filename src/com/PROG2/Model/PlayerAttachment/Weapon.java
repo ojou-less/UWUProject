@@ -15,29 +15,30 @@ import java.util.Random;
 
 public class Weapon extends Usable {
     //----------------------------Attributes----------------------------
-    //: External classes
-    private Player player;
-    private DungeonMaster dungeonMaster;
-
     //: Main attribute ---------------------------
+    int ID;
     String weaponName;
-    private enum weaponType {SWORD, BOW, SPEAR, AXE, CLUB,};
+    WeaponType weaponType;
     int[] weaponLevel = {1, 2, 3}; //Wie in Spiel hat 3 Levels
-    //: Combat attribute -------------------------
+    //: Combat attribute -------------------------8o
     double hitDamage;
-    private Random randomDamage;
     //private double sideEffect;
     //: Shop --------------------------
-    private int zen;
-    private double weaponPrice;
-    private double upgradePrice;
+    public double zen;
+    private double purchasePrice = zen;
+    private final double sellPrice = purchasePrice * 0.8;
+    private double upgradePrice = zen;
     private final boolean[] hasWeapon = {false, true};
     //: Simulation (Prüfen, ob die Waffen kaufen kann oder upgraden kann) (Ohne GUI)
     private boolean purcharseWeaponAccepted;
     private boolean canUpgradeWeapon;
 
-    public Weapon(int ID) {
+    public Weapon(int ID, String weaponName, WeaponType weaponType, double hitDamage, double zen) {
         super(ID);
+        this.weaponName = weaponName;
+        this.weaponType = weaponType;
+        this.hitDamage = hitDamage;
+        this.zen = zen;
     }
 
     //--------------------------Getter & Setter----------------------------
@@ -62,18 +63,18 @@ public class Weapon extends Usable {
         this.hitDamage = hitDamage;
     }
 
-    public int getZen() {
+    public double getZen() {
         return zen;
     }
-    public void setZen(int zen) {
+    public void setZen(double zen) {
         this.zen = zen;
     }
 
-    public double getWeaponPrice() {
-        return weaponPrice;
+    public double getPurchasePrice() {
+        return purchasePrice;
     }
-    public void setWeaponPrice(double weaponPrice) {
-        this.weaponPrice = weaponPrice;
+    public void setPurchasePrice(double weaponPrice) {
+        this.purchasePrice = weaponPrice;
     }
 
     public double getUpgradePrice() {
@@ -86,39 +87,27 @@ public class Weapon extends Usable {
 
     //---------------------------Methods--------------------------------
 
-    public void weaponHit(double hitDamage, int[] weaponLevel, Exception e) {
+    public void weaponHit(double hitDamage, int[] weaponLevel) throws Exception {
         this.hitDamage = hitDamage;
         this.weaponLevel = weaponLevel;
         /* weaponHit: Die Waffen werden zufällige Damage verursachen, je höher der Waffenlevel ist
          *  desto schädlicher die Waffen sind.
          */
         for (int i = 0; i <= weaponLevel.length; i++) {
+            int r1 = 1;
+            int r2 = (int) (r1 * 1.6);
+            Random randomDamage = new Random(r1);
             if (i == 1) {
-                hitDamage = hitDamage * randomDamage.nextDouble(1, 1.6);
+                hitDamage = hitDamage * randomDamage.nextDouble(r1, r2);
             } else if (i == 2) {
-                hitDamage = hitDamage * randomDamage.nextDouble(2, 3.2);
+                hitDamage = hitDamage * randomDamage.nextDouble(r1+1, r2);
             } else if (i == 3) {
-                hitDamage = hitDamage * randomDamage.nextDouble(3, 5);
+                hitDamage = hitDamage * randomDamage.nextDouble(r1+2, r2+2);
             } else {
                 System.out.println("ERROR 1823: Weapon is corrupted, no level detected please " +
                         "report this to our development team: ");
-                e.printStackTrace();
             }
         }
     }
-    public void purcharseWeapon(double weaponPrice, int p) {
-        this.weaponPrice = weaponPrice;
-
-        if (hasWeapon[p] = true) {
-            System.out.println("You have already purchased this weapon. Buy other weapon!");
-            return;
-        }
-
-
-    }
-
-    public void upgradeWeapon(double upgradePrice) {
-        this.upgradePrice = upgradePrice;
-    }
-
 }
+
