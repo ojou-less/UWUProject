@@ -1,9 +1,15 @@
 package com.PROG2.Model.PlayerAttachment;
 
 public enum WeaponType {
-    AXE,
-    BOW,
-    CLUB,
-    SPEAR,
-    SWORD
+    AXE('A'),
+    BOW('B'),
+    CLUB('C'),
+    SPEAR('S'),
+    SWORD('W');
+
+    private final char c;
+
+    WeaponType(char c) {
+        this.c = c;
+    }
 }

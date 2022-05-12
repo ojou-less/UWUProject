@@ -7,6 +7,8 @@ import javafx.collections.ObservableList;
 
 public class Weapons {
     private static ObservableList<Weapon> weapons = FXCollections.emptyObservableList();
+    // ----- List-Weapons
+    // Swords
     private static Weapon swordOne = new Weapon(400,"Iron Sword", WeaponType.SWORD,10, 50);
     private static Weapon swordTwo = new Weapon(401,"Magestic Sword", WeaponType.SWORD,15, 200);
     private static Weapon swordThree = new Weapon(402,"Ezclak", WeaponType.SWORD,14, 180);
