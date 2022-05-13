@@ -7,8 +7,7 @@ public enum WeaponType {
     SPEAR('S'),
     SWORD('W');
 
-    private final char c;
-
+    final char c;
     WeaponType(char c) {
         this.c = c;
     }
