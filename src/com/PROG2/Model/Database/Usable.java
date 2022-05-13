@@ -7,7 +7,7 @@ public class Usable {
         this.ID = ID;
     }
 
-    public int ID() {
+    public int getID() {
         return ID;
     }
 

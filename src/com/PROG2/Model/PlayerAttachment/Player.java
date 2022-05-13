@@ -141,7 +141,7 @@ public class Player implements Serializable {
         return this;
     }
 
-    public ClassTypes classesType() {
+    public ClassTypes getClassesType() {
         return classesType;
     }
 

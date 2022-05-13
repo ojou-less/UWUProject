@@ -10,12 +10,12 @@ public class EffectCards {
     public EffectCards() {
     }
 
-    public static ObservableList<EffectCard> effectCards() {
+    public static ObservableList<EffectCard> getEffectCards() {
         return effectCards;
     }
 
     public static EffectCard get(int i){
-        return EffectCards.effectCards().get(i);
+        return EffectCards.getEffectCards().get(i);
     }
 
     public static EffectCards setEffectCards(ObservableList<EffectCard> effectCards) {
