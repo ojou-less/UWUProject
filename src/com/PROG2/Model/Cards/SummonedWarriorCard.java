@@ -14,16 +14,20 @@ public class SummonedWarriorCard extends Usable {
     private final int hitRange;
     private final int moveRange;
     private final boolean canSummon;
+    private final int buyCost;
 
-    public SummonedWarriorCard(int ID, double health, double hitDamage, double defense, int hitRange, int moveRange, boolean canSummon) {
+    public SummonedWarriorCard(int ID, double health, double hitDamage, double defense, ObservableList<Ability> abilities, int hitRange, int moveRange, boolean canSummon, int buyCost) {
         super(ID);
         this.health = health;
         this.hitDamage = hitDamage;
         this.defense = defense;
+        this.abilities = abilities;
         this.hitRange = hitRange;
         this.moveRange = moveRange;
         this.canSummon = canSummon;
+        this.buyCost = buyCost;
     }
+
     public SummonedWarriorCard addeffect(Ability ability){
         abilities.add(ability);
         this.active(ability);
@@ -81,5 +85,9 @@ public class SummonedWarriorCard extends Usable {
 
     public boolean canSummon() {
         return canSummon;
+    }
+
+    public int buyCost() {
+        return buyCost;
     }
 }
