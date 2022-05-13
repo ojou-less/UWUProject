@@ -4,7 +4,9 @@ import com.PROG2.Model.Database.ClassTypes;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class Player {
+import java.io.Serializable;
+
+public class Player implements Serializable {
     private double level;
     private double mana;
     private double addMana = 0;
