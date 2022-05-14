@@ -1,7 +1,10 @@
 package com.PROG2.Model.PlayerAttachment;
 
 import com.PROG2.Model.Database.Usable;
-
+/**
+ * Klasse Armor, erbt von Superklasse Usable. Wird gebraucht, um Spiel-Objekte "Armor"
+ * erzeugen zu können.
+ */
 public class Armor extends Usable {
     private double health;
     private double addHealth = 0;

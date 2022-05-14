@@ -4,6 +4,10 @@ import com.PROG2.Model.PlayerAttachment.Ability;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+/**
+ * Klasse für das zwischenspeichern der Objekte vom Typ Ability
+ * vor der Speicherung.
+ */
 public class Abilities {
     private static ObservableList<Ability> effectList = FXCollections.observableArrayList();
 

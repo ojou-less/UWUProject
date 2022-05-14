@@ -4,7 +4,10 @@ import com.PROG2.Model.PlayerAttachment.Weapon;
 import com.PROG2.Model.PlayerAttachment.WeaponType;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
+/**
+ * Klasse für das zwischenspeichern der Objekte vom Typ Weapon
+ * vor der Speicherung.
+ */
 public class Weapons {
     private static ObservableList<Weapon> weapons = FXCollections.emptyObservableList();
     // ----- List-Weapons

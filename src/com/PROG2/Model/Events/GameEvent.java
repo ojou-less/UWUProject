@@ -6,6 +6,9 @@ import javafx.collections.ObservableList;
 
 import java.util.Random;
 
+/**
+ * Klasse GameEvent für das generieren eines zufällig auftretenden Events im Spiel.
+ */
 public class GameEvent {
 
     private ObservableList<Trader> trader = FXCollections.observableArrayList();

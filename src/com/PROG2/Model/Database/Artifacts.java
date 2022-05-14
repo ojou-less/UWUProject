@@ -3,7 +3,10 @@ package com.PROG2.Model.Database;
 import com.PROG2.Model.PlayerAttachment.Artifact;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
+/**
+ * Klasse für das zwischenspeichern der Objekte vom Typ Artifact
+ * vor der Speicherung.
+ */
 public class Artifacts {
     private static ObservableList<Artifact> artifacts = FXCollections.observableArrayList();
 
