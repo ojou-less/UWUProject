@@ -5,6 +5,9 @@ import com.PROG2.Model.Database.Usable;
 
 import java.util.Random;
 
+/**
+ * Klasse für die Erzeugung eines Weapon Objektes. Erbt von Usable da Weapon zu den vom Spieler nutzbaren Items gehört.
+ */
 public class Weapon extends Usable {
     //----------------------------Attributes----------------------------
     //: Main attribute ---------------------------
