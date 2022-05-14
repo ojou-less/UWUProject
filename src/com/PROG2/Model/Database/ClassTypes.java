@@ -7,24 +7,19 @@ import javafx.collections.ObservableList;
 
 public class ClassTypes {
 
-    private static ObservableList<ClassType> classTypes = FXCollections.observableArrayList();
+    private ObservableList<ClassType> classTypes = FXCollections.observableArrayList();
     public ClassTypes(){
 
     }
-    public static ObservableList<ClassType> getClassTypes() {
+    public ObservableList<ClassType> getClassTypes() {
         return classTypes;
     }
 
-    public static ClassType get(int i){
-        return ClassTypes.getClassTypes().get(i);
+    public ClassType get(int i){
+        return this.classTypes.get(i);
     }
 
-    public static EffectCards setEffectCards(ObservableList<ClassType> classTypes) {
-        ClassTypes.classTypes = classTypes;
-        return null;
-    }
-
-    public static ClassTypes add(ClassType classType){
+    public ClassTypes add(ClassType classType){
         classTypes.add(classType);
         return null;
     }
