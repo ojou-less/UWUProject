@@ -2,6 +2,10 @@ package com.PROG2.Model.PlayerAttachment;
 
 import com.PROG2.Model.Database.ClassTypes;
 
+/**
+ * Klasse für den Spielbaren Charakter "Adventurer". Erbt von Superklasse Player, genau wie der Spielbare
+ * Chrakter "Dungeon Master". Adventurer unterscheidet sich von Dungeon Master in den Class Types.
+ */
 public class Adventurer extends Player{
 
 //    private ClassTypes adventurerClassesType;

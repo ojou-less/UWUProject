@@ -6,6 +6,9 @@ import javafx.collections.ObservableList;
 
 import java.io.Serializable;
 
+/**
+ * Superklasse für alle im Spiel vorhandenen spielbaren Charakter.
+ */
 public class Player implements Serializable {
     private double level;
     private double mana;

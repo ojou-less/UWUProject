@@ -1,5 +1,8 @@
 package com.PROG2.Model.Database;
 
+/**
+ * Superklasse für alle vom Spieler nutzbare Items.
+ */
 public class Usable {
     private int ID;
 

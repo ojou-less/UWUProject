@@ -4,7 +4,10 @@ import com.PROG2.Model.PlayerAttachment.Armor;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
+/**
+ * Klasse für das zwischenspeichern der Objekte vom Typ Armor
+ * vor der Speicherung.
+ */
 public class Armors {
     private static ObservableList<Armor> armors = FXCollections.emptyObservableList();
 

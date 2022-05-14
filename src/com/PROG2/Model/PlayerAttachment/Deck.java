@@ -6,7 +6,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import static com.PROG2.util.MyIO.*;
-
+/**
+ * Klasse Deck, mit der ein Kartendeck erzeugt werden kann.
+ */
 public class Deck {
     private final ObservableList<EffectCard> effectCards = FXCollections.observableArrayList();
     private final ObservableList<SummonedWarriorCard> summonedWarriorCards = FXCollections.observableArrayList();

@@ -9,6 +9,9 @@ import com.PROG2.Start;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+/**
+ * Klasse für den im Spiel zufällig erscheinenden Händler mit zufälligen Items, die gekauft werden können.
+ */
 public class Trader {
     private int[] IDs;
     private Deck cardsForSale = new Deck();

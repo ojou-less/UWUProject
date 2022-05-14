@@ -1,5 +1,8 @@
 package com.PROG2.Model.PlayerAttachment;
-
+/**
+ * Klasse ClassType, wird gebraucht, um Spiel-Objekte "ClassTypes"
+ * erzeugen zu können.
+ */
 public class ClassType {
     private String name;
     private String iconpath;

@@ -2,6 +2,10 @@ package com.PROG2.Model.PlayerAttachment;
 
 import com.PROG2.Model.Database.Usable;
 
+/**
+ * Klasse Ability, erbt von Superklasse Usable. Wird gebraucht, um Spiel-Objekte "Abilities"
+ * erzeugen zu können.
+ */
 public class Ability extends Usable {
 
 

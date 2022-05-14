@@ -3,7 +3,10 @@ package com.PROG2.Model.Database;
 import com.PROG2.Model.Cards.SummonedWarriorCard;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
+/**
+ * Klasse für das zwischenspeichern der Objekte vom Typ WarriorCard
+ * vor der Speicherung.
+ */
 public class WarriorCards {
     private static ObservableList<SummonedWarriorCard> warriorCards = FXCollections.emptyObservableList();
 
