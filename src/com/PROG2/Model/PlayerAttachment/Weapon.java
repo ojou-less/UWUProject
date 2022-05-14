@@ -5,14 +5,6 @@ import com.PROG2.Model.Database.Usable;
 
 import java.util.Random;
 
-/** To-Do-List:
- *  Methode herstellen für Waffen und Eigenschaften einzelnen Waffen
- *  .json für neue Methode
- *  upgrade- und purcharseWeapon-Methode vollständigen
- *
- * Git test
- */
-
 public class Weapon extends Usable {
     //----------------------------Attributes----------------------------
     //: Main attribute ---------------------------
@@ -20,12 +12,12 @@ public class Weapon extends Usable {
     WeaponType weaponType;
     int[] weaponLevel = {1, 2, 3}; //Wie in Spiel hat 3 Levels
     //: Combat attribute -------------------------8o
-    double hitDamage;
-    double hitSpeed;
+    public double hitDamage;
+    public double hitSpeed;
     //: Shop --------------------------
     char c;
     public double zen;
-    //: Simulation (Prüfen, ob die Waffen kaufen kann oder upgraden kann) (Ohne GUI)
+    //: Simulation
 
     public Weapon(int ID, String weaponName, WeaponType weaponType, double hitDamage, double hitSpeed, double zen) {
         super(ID);
