@@ -6,7 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 /**
  * Klasse für das zwischenspeichern der Objekte vom Typ StartDeck
- * vor der Speicherung.
+ * vor der Serialisierung.
  */
 public class StartDecks {
     private static ObservableList<Deck> decks = FXCollections.observableArrayList();

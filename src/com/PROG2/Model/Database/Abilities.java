@@ -6,7 +6,7 @@ import javafx.collections.ObservableList;
 
 /**
  * Klasse für das zwischenspeichern der Objekte vom Typ Ability
- * vor der Speicherung.
+ * vor der Serialisierung.
  */
 public class Abilities {
     private static ObservableList<Ability> effectList = FXCollections.observableArrayList();
