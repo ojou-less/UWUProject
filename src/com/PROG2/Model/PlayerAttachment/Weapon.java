@@ -36,13 +36,28 @@ public class Weapon extends Usable {
 
     //---------------------------Methods--------------------------------
 
+    /**
+     *
+     * @param weaponType
+     * @param hitDamage
+     * @param weaponLevel
+     * @param hitSpeed
+     *
+     * Hier wird alle Hits von verschiedenen Waffen getrennt durch eine switch-case. Alle cases werden unterschiedliche
+     * Hit-Methode aufgerufen.
+     *
+     * Jeder Hit sollte ein bisschen stärker oder schwächer schlagen, einige sogar muss bestimmte Schlaggeschwindigkeit
+     * erreichen, wenn sie treffen wollen (Axe, Clubs). Je langsamer ist die Geschwindigkeit, desto höhere Chance der Gegner hat,
+     * die Hit ausweichen.
+     *
+     * Bogen und Spear werden mit einem Range, Bogen haben bis 3 Blocken, Spear bis 2. Je nähe der Gegner ist, desto der Hit schwächer ist,
+     * aber hat höhere Chance zu treffen, je weiter der Gegner ist, desto weniger Chance hat, zu treffen, aber der Hit ist stärker.
+     */
     public void weaponHit(WeaponType weaponType, double hitDamage, int[] weaponLevel, double hitSpeed) {
         this.weaponType = weaponType;
         this.hitDamage = hitDamage;
         this.weaponLevel = weaponLevel;
         this.hitSpeed = hitSpeed;
-
-
 
         switch (c) {
             case 'A':
@@ -61,6 +76,14 @@ public class Weapon extends Usable {
 
     }
 
+    /**
+     *
+     * @param hitDamage
+     * @param weaponLevel
+     *
+     * Das Schwert benötigt keine Trefferchance, weil sie immer treffen, je höher der Level einer Waffe hat, desto
+     * stärker die Hits sind.
+     */
     public void swordHit(double hitDamage, int[] weaponLevel) {
         this.hitDamage = hitDamage;
         this.weaponLevel = weaponLevel;
@@ -83,6 +106,17 @@ public class Weapon extends Usable {
             }
         }
     }
+
+    /**
+     * Die axeHit-Methode gilt für Axe und Schläger, wie oben bei weaponHit und swordHit erklärt wurde, je höher
+     * die Level einer Waffe hat, desto stärker die Hits sind. Aber auch jeder Hit kann höhere oder tiefere Trefferchance
+     * haben. Je tiefer der Trefferchance ist, desto der Gegner höhere Chance hat, dieser Hit auszuweichen.
+     * Sie haben aber stärkere hitDamage als ein Schwert.
+     *
+     * @param hitDamage
+     * @param weaponLevel
+     * @param hitSpeed
+     */
 
     public void axeHit(double hitDamage, int[] weaponLevel, double hitSpeed) {
         this.hitDamage = hitDamage;
@@ -110,6 +144,15 @@ public class Weapon extends Usable {
             }
         }
     }
+
+    /**
+     * Wie oben in weaponHit erklärt, Spear hat einen Range, also ein
+     *
+     * @param range
+     * @param hitDamage
+     * @param weaponLevel
+     * @param hitSpeed
+     */
 
     public void spearHit(int range, double hitDamage, int[] weaponLevel, double hitSpeed) {
         this.hitDamage = hitDamage;
