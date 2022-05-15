@@ -1,6 +1,7 @@
 package com.PROG2.Model.PlayerAttachment;
 
 import com.PROG2.Model.Database.ClassTypes;
+import com.PROG2.Model.Database.Usable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -27,6 +28,7 @@ public class Player implements Serializable {
     private Deck cards;
     private ObservableList<Ability> abilities = FXCollections.observableArrayList();
     private int zen = 0;
+    private ObservableList<Usable> intventory = FXCollections.observableArrayList();
 
 
     public Player(double level, double mana, double health, double hitDamage, ClassTypes classesType, int drawLimit, int zen) {
@@ -63,6 +65,19 @@ public class Player implements Serializable {
         return this;
     }
 
+    public ObservableList<Usable> intventory() {
+        return intventory;
+    }
+
+    public Player setIntventory(ObservableList<Usable> intventory) {
+        this.intventory = intventory;
+        return this;
+    }
+    public Player addInventory(Usable e){
+        this.intventory().add(e);
+        return this;
+    }
+
     /**
      * hilfe man was????????????
      * @param ability
@@ -81,6 +96,7 @@ public class Player implements Serializable {
                 abilities) {
             if(ability.timer()==0){
                 this.abilities.remove(ability);
+                this.delEffect(ability);
 
             }else {
                 ability = ability.countAbility();
