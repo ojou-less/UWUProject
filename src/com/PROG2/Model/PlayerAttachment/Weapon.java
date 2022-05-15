@@ -73,4 +73,16 @@ public class Weapon extends Usable {
         this.cost = cost;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "Weapon{" +
+                "name='" + name + '\'' +
+                ", iconPath='" + iconPath + '\'' +
+                ", level=" + level +
+                ", hit=" + hit +
+                ", range=" + range +
+                ", cost=" + cost +
+                '}';
+    }
 }

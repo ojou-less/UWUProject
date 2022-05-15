@@ -40,4 +40,18 @@ public class Deck {
         effectCards.remove(effectCards.indexOf(e));
     }
 
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (EffectCard e:
+             effectCards) {
+            stringBuilder.append(e.toString());
+        }
+        for (SummonedWarriorCard e:
+             summonedWarriorCards) {
+            stringBuilder.append(e.toString());
+        }
+
+        return "Deck{"+ stringBuilder.toString() +"};";
+    }
 }

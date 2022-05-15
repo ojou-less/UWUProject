@@ -37,4 +37,14 @@ public class ClassType {
     public void setAbility(Ability ability){
         this.ability = ability;
     }
+
+    @Override
+    public String toString() {
+        return "ClassType{" +
+                "name='" + name + '\'' +
+                ", iconpath='" + iconpath + '\'' +
+                ", cards=" + cards +
+                ", ability=" + ability +
+                '}';
+    }
 }

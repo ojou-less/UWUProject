@@ -17,7 +17,7 @@ public class Player implements Serializable {
     private double addHealth = 0;
     private double hitDamage;
     private double addHitDamage = 0;
-    private OldWeapon weapon;
+    private Weapon weapon;
     private Armor armor;
     private Artifact artifact01;
     private Artifact artifact02;
@@ -180,7 +180,7 @@ public class Player implements Serializable {
      * Getter für Weapon
      * @return weapon
      */
-    public OldWeapon weapon() {
+    public Weapon weapon() {
         return weapon;
     }
 
@@ -189,7 +189,7 @@ public class Player implements Serializable {
      * @param weapon
      * @return weapon
      */
-    public Player setWeapon(OldWeapon weapon) {
+    public Player setWeapon(Weapon weapon) {
         this.weapon = weapon;
         return this;
     }
@@ -291,5 +291,29 @@ public class Player implements Serializable {
     public Player setZen(int zen) {
         this.zen = zen;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "level=" + level +
+                ", mana=" + mana +
+                ", addMana=" + addMana +
+                ", health=" + health +
+                ", addHealth=" + addHealth +
+                ", hitDamage=" + hitDamage +
+                ", addHitDamage=" + addHitDamage +
+                ", weapon=" + weapon +
+                ", armor=" + armor +
+                ", artifact01=" + artifact01 +
+                ", artifact02=" + artifact02 +
+                ", classesType=" + classesType +
+                ", drawLimit=" + drawLimit +
+                ", addDrawLimit=" + addDrawLimit +
+                ", cards=" + cards +
+                ", abilities=" + abilities +
+                ", zen=" + zen +
+                ", intventory=" + intventory +
+                '}';
     }
 }

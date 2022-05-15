@@ -31,4 +31,12 @@ public class Armor extends Usable {
         this.addHealth = addHealth;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "Armor{" +
+                "health=" + health +
+                ", addHealth=" + addHealth +
+                '}';
+    }
 }

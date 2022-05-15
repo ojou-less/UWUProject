@@ -105,4 +105,18 @@ public class Ability extends Usable {
         this.increaseDrawLimit = increaseDrawLimit;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "Ability{" +
+                "timer=" + timer +
+                ", name='" + name + '\'' +
+                ", iconPath='" + iconPath + '\'' +
+                ", increaseHealth=" + increaseHealth +
+                ", increaseMana=" + increaseMana +
+                ", increaseDamage=" + increaseDamage +
+                ", increaseArmor=" + increaseArmor +
+                ", increaseDrawLimit=" + increaseDrawLimit +
+                '}';
+    }
 }

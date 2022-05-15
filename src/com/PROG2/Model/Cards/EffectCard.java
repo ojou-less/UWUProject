@@ -80,4 +80,13 @@ public class EffectCard extends Usable {
         this.summonCost = summonCost;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return "EffectCard{" +
+                "cardAbility=" + cardAbility.toString() +
+                ", buyCost=" + buyCost +
+                ", summonCost=" + summonCost +
+                '}';
+    }
 }

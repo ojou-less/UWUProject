@@ -163,4 +163,18 @@ public class SummonedWarriorCard extends Usable {
     public int buyCost() {
         return buyCost;
     }
+
+    @Override
+    public String toString() {
+        return "SummonedWarriorCard{" +
+                "health=" + health +
+                ", hitDamage=" + hitDamage +
+                ", defense=" + defense +
+                ", abilities=" + abilities +
+                ", hitRange=" + hitRange +
+                ", moveRange=" + moveRange +
+                ", canSummon=" + canSummon +
+                ", buyCost=" + buyCost +
+                '}';
+    }
 }
