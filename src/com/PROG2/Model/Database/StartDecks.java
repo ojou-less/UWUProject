@@ -27,7 +27,7 @@ public class StartDecks {
         return null;
     }
 
-    public StartDecks add(Deck deck){
+    public static StartDecks add(Deck deck){
         decks.add(deck);
         return null;
     }

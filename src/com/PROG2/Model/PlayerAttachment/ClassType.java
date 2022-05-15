@@ -9,6 +9,12 @@ public class ClassType {
     private Deck cards;
     private Ability ability;
 
+    public ClassType(String name, String iconpath, Ability ability) {
+        this.name = name;
+        this.iconpath = iconpath;
+        this.ability = ability;
+    }
+
     public String getName(){
         return name;
     }
@@ -20,12 +26,6 @@ public class ClassType {
     }
     public void setIconpath(String iconpath){
         this.iconpath = iconpath;
-    }
-    public Deck getCards(){
-        return cards;
-    }
-    public void setCards(Deck cards){
-        this.cards = cards;
     }
     public int getAbilityID(){
         return ability.getID();

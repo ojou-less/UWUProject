@@ -10,20 +10,20 @@ import javafx.collections.ObservableList;
  */
 public class ClassTypes {
 
-    private ObservableList<ClassType> classTypes = FXCollections.observableArrayList();
+    private static ObservableList<ClassType> classTypes = FXCollections.observableArrayList();
     public ClassTypes(){
 
     }
-    public ObservableList<ClassType> getClassTypes() {
+    public static ObservableList<ClassType> getClassTypes() {
         return classTypes;
     }
 
-    public ClassType get(int i){
-        return this.classTypes.get(i);
+    public static void get(int i){
+        classTypes.get(i);
     }
 
-    public ClassTypes add(ClassType classType){
+    public static void add(ClassType classType){
         classTypes.add(classType);
-        return null;
+
     }
 }

@@ -9,7 +9,7 @@ public class Armor extends Usable {
     private double health;
     private double addHealth = 0;
 
-    public Armor(double health,int ID) {
+    public Armor(int ID,double health){
         super(ID);
         this.health = health;
     }
