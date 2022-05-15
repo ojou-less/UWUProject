@@ -23,7 +23,7 @@ public class Trader {
 
     /**
      * Konstruktor für Trader
-     * @param IDs
+     * @param IDs die Item IDs
      */
     public Trader(int[] IDs) {
         this.IDs = IDs;
@@ -31,8 +31,7 @@ public class Trader {
     }
 
     /**
-     * Methode für das befüllen des Shops des Händlers
-     * Später ganz praktisch für die GUI
+     * Methode für das befüllen des Shops des Händlers.
      * @return
      */
     private Trader fillTrader() {
