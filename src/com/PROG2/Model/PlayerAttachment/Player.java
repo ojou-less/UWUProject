@@ -17,7 +17,7 @@ public class Player implements Serializable {
     private double addHealth = 0;
     private double hitDamage;
     private double addHitDamage = 0;
-    private Weapon weapon;
+    private OldWeapon weapon;
     private Armor armor;
     private Artifact artifact01;
     private Artifact artifact02;
@@ -180,7 +180,7 @@ public class Player implements Serializable {
      * Getter für Weapon
      * @return weapon
      */
-    public Weapon weapon() {
+    public OldWeapon weapon() {
         return weapon;
     }
 
@@ -189,7 +189,7 @@ public class Player implements Serializable {
      * @param weapon
      * @return weapon
      */
-    public Player setWeapon(Weapon weapon) {
+    public Player setWeapon(OldWeapon weapon) {
         this.weapon = weapon;
         return this;
     }

@@ -1,10 +1,9 @@
 package com.PROG2.Model.Events;
 
-import com.PROG2.Model.Database.WarriorCards;
 import com.PROG2.Model.PlayerAttachment.Armor;
 import com.PROG2.Model.PlayerAttachment.Artifact;
 import com.PROG2.Model.PlayerAttachment.Deck;
-import com.PROG2.Model.PlayerAttachment.Weapon;
+import com.PROG2.Model.PlayerAttachment.OldWeapon;
 import com.PROG2.Start;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,7 +16,7 @@ public class Trader {
     private Deck cardsForSale = new Deck(); //neues Deck wird erzeugt für den Verkauf von Karten
     //Instanzen von ObservableList werden erstellt
     private ObservableList<Artifact> artifactsForSale = FXCollections.observableArrayList();
-    private ObservableList<Weapon> weaponsForSale = FXCollections.observableArrayList();
+    private ObservableList<OldWeapon> weaponsForSale = FXCollections.observableArrayList();
     private ObservableList<Armor> armorForSale = FXCollections.observableArrayList();
 
 
@@ -52,7 +51,7 @@ public class Trader {
      * Getter Observable List Weapon
      * @return Liste mit weaponsForSale
      */
-    public ObservableList<Weapon> getWeaponsForSale(){
+    public ObservableList<OldWeapon> getWeaponsForSale(){
         return weaponsForSale;
     }
 
