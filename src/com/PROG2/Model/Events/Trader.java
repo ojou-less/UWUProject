@@ -1,9 +1,10 @@
 package com.PROG2.Model.Events;
 
+import com.PROG2.Model.Database.*;
 import com.PROG2.Model.PlayerAttachment.Armor;
 import com.PROG2.Model.PlayerAttachment.Artifact;
 import com.PROG2.Model.PlayerAttachment.Deck;
-import com.PROG2.Model.PlayerAttachment.OldWeapon;
+import com.PROG2.Model.PlayerAttachment.Weapon;
 import com.PROG2.Start;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -16,7 +17,7 @@ public class Trader {
     private Deck cardsForSale = new Deck(); //neues Deck wird erzeugt für den Verkauf von Karten
     //Instanzen von ObservableList werden erstellt
     private ObservableList<Artifact> artifactsForSale = FXCollections.observableArrayList();
-    private ObservableList<OldWeapon> weaponsForSale = FXCollections.observableArrayList();
+    private ObservableList<Weapon> weaponsForSale = FXCollections.observableArrayList();
     private ObservableList<Armor> armorForSale = FXCollections.observableArrayList();
 
 
@@ -37,11 +38,11 @@ public class Trader {
         for (int i:
              this.IDs) {
             switch (i/100){
-                case 0: cardsForSale.add(Start.warriorCards().get(i%100));
-                case 1: cardsForSale.add(Start.effectCards().get(i%100));
-                case 3: armorForSale.add(Start.armors().get(i%100));
-                case 4: weaponsForSale.add(Start.weapons().get(i%100));
-                case 5: artifactsForSale.add(Start.artifacts().get(i%100));
+                case 0: cardsForSale.add(WarriorCards.get(i%100));
+                case 1: cardsForSale.add(EffectCards.get(i%100));
+                case 3: armorForSale.add(Armors.get(i%100));
+                case 4: weaponsForSale.add(Weapons.get(i%100));
+                case 5: artifactsForSale.add(Artifacts.get(i%100));
             }
         }
         return this;
@@ -51,7 +52,7 @@ public class Trader {
      * Getter Observable List Weapon
      * @return Liste mit weaponsForSale
      */
-    public ObservableList<OldWeapon> getWeaponsForSale(){
+    public ObservableList<Weapon> getWeaponsForSale(){
         return weaponsForSale;
     }
 

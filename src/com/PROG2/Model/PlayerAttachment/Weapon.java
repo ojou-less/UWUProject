@@ -3,39 +3,18 @@ package com.PROG2.Model.PlayerAttachment;
 import com.PROG2.Model.Database.Usable;
 
 public class Weapon extends Usable {
-    private String name;
-    private String iconPath;
+
     private int level;
     private double hit;
     private int range;
     private int cost;
 
-    public Weapon(int ID, String name, String iconPath, int level, double hit, int range, int cost) {
-        super(ID);
-        this.name = name;
-        this.iconPath = iconPath;
+    public Weapon(int ID, String objName, String iconPath, int level, double hit, int range, int cost) {
+        super(ID, objName, iconPath);
         this.level = level;
         this.hit = hit;
         this.range = range;
         this.cost = cost;
-    }
-
-    public String name() {
-        return name;
-    }
-
-    public Weapon setName(String name) {
-        this.name = name;
-        return this;
-    }
-
-    public String iconPath() {
-        return iconPath;
-    }
-
-    public Weapon setIconPath(String iconPath) {
-        this.iconPath = iconPath;
-        return this;
     }
 
     public int level() {
@@ -77,9 +56,7 @@ public class Weapon extends Usable {
     @Override
     public String toString() {
         return "Weapon{" +
-                "name='" + name + '\'' +
-                ", iconPath='" + iconPath + '\'' +
-                ", level=" + level +
+                "level=" + level +
                 ", hit=" + hit +
                 ", range=" + range +
                 ", cost=" + cost +

@@ -29,7 +29,7 @@ public class ClassType {
         this.iconpath = iconpath;
     }
     public int getAbilityID(){
-        return ability.getID();
+        return ability.ID();
     }
     public Ability getAbility(){
         return ability;

@@ -61,8 +61,10 @@ public class InputClass {
             String [] activeLine = line.split("-");
             Armors.add(new Armor(
                     Integer.getInteger(activeLine[0]),
-                    Double.valueOf(activeLine[1])
-            ));
+                    activeLine[1],
+                    activeLine[2],
+                    Double.valueOf(activeLine[3])
+            ));//(int ID, String objName, String iconPath, double health, double addHealth)
         }
 
     }
@@ -107,10 +109,12 @@ public class InputClass {
             String[] activeLine = line.split("-");
             EffectCards.add(new EffectCard(
                     Integer.getInteger(activeLine[0]),
-                    Abilities.get(Integer.valueOf(activeLine[1])%100-1),
-                    Integer.valueOf(activeLine[2]),
-                    Integer.valueOf(activeLine[3])
-            ));
+                    activeLine[1],
+                    activeLine[2],
+                    Abilities.get(Integer.valueOf(activeLine[3])%100-1),
+                    Integer.valueOf(activeLine[4]),
+                    Integer.valueOf(activeLine[5])
+            ));//EffectCard(int ID, String objName, String iconPath, Ability cardAbility, int buyCost, int summonCost)
 
         }
 
@@ -144,20 +148,35 @@ public class InputClass {
             String[] activeLine = line.split("-");
             WarriorCards.add(new SummonedWarriorCard(
                     Integer.getInteger(activeLine[0]),
-                    Double.valueOf(activeLine[1]),
-                    Double.valueOf(activeLine[2]),
+                    activeLine[1],
+                    activeLine[2],
                     Double.valueOf(activeLine[3]),
-                    Integer.getInteger(activeLine[4]),
-                    Integer.getInteger(activeLine[5]),
-                    Boolean.valueOf(activeLine[6]),
-                    Integer.getInteger(activeLine[7])
-            ));//(int ID, double health, double hitDamage, double defense, int hitRange, int moveRange, boolean canSummon, int buyCost
+                    Double.valueOf(activeLine[4]),
+                    Double.valueOf(activeLine[5]),
+                    Integer.getInteger(activeLine[6]),
+                    Integer.getInteger(activeLine[7]),
+                    Boolean.valueOf(activeLine[8]),
+                    Integer.getInteger(activeLine[9])
+            ));//SummonedWarriorCard(int ID, String objName, String iconPath, double health, double hitDamage, double defense, int hitRange, int moveRange, boolean canSummon, int buyCost)
 
         }
     }
 
-    public static void weapons() {
-        //TODO; after choice
+    public static void weapons() throws FileNotFoundException {
+        Scanner scanner = new Scanner(new File("filename"));
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String[] activeLine = line.split("-");
+            Weapons.add(new Weapon(
+                    Integer.getInteger(activeLine[0]),
+                    activeLine[1],
+                    activeLine[2],
+                    Integer.getInteger(activeLine[3]),
+                    Double.valueOf(activeLine[4]),
+                    Integer.getInteger(activeLine[5]),
+                    Integer.getInteger(activeLine[6])
+            ));
+        }
     }
-    // = new FileReader("input.txt", Charset.forName("UTF8"));
+    //Weapon(int ID, String objName, String iconPath, int level, double hit, int range, int cost)
 }

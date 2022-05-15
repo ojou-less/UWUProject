@@ -20,8 +20,8 @@ public class EffectCard extends Usable {
      * @param buyCost
      * @param summonCost
      */
-    public EffectCard(int ID, Ability cardAbility, int buyCost, int summonCost) {
-        super(ID);
+    public EffectCard(int ID, String objName, String iconPath, Ability cardAbility, int buyCost, int summonCost) {
+        super(ID, objName, iconPath);
         this.cardAbility = cardAbility;
         this.buyCost = buyCost;
         this.summonCost = summonCost;

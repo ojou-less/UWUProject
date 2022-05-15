@@ -19,7 +19,6 @@ public class SummonedWarriorCard extends Usable {
     private final int moveRange;
     private final boolean canSummon;
     private final int buyCost;
-
     /**
      * Konstruktor für SummonedWarriorCard
      * @param ID
@@ -31,16 +30,19 @@ public class SummonedWarriorCard extends Usable {
      * @param canSummon
      * @param buyCost
      */
-    public SummonedWarriorCard(int ID, double health, double hitDamage, double defense, int hitRange, int moveRange, boolean canSummon, int buyCost) {
-        super(ID);
+    public SummonedWarriorCard(int ID, String objName, String iconPath, double health, double hitDamage, double defense, int hitRange, int moveRange, boolean canSummon, int buyCost) {
+        super(ID, objName, iconPath);
         this.health = health;
         this.hitDamage = hitDamage;
         this.defense = defense;
+        this.abilities = abilities;
         this.hitRange = hitRange;
         this.moveRange = moveRange;
         this.canSummon = canSummon;
         this.buyCost = buyCost;
     }
+
+
 
     /**
      * Methode für das anfügen eines Effektes an die WarriorCard.

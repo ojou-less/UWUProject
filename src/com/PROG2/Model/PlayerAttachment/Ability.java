@@ -19,7 +19,7 @@ public class Ability extends Usable {
     private double increaseArmor;
     private int increaseDrawLimit;
     public Ability(int ID, int timer, String name, String iconPath, double increaseHealth, double increaseMana, double increaseDamage, double increaseArmor, int increaseDrawLimit) {
-        super(ID);
+        super(ID,name,iconPath);
         this.timer = timer;
         this.name = name;
         this.iconPath = iconPath;

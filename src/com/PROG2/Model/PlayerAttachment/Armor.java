@@ -9,8 +9,8 @@ public class Armor extends Usable {
     private double health;
     private double addHealth = 0;
 
-    public Armor(int ID,double health){
-        super(ID);
+    public Armor(int ID, String objName, String iconPath, double health) {
+        super(ID, objName, iconPath);
         this.health = health;
     }
 
