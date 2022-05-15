@@ -12,14 +12,11 @@ import java.util.Random;
 
 public class Weapon extends Usable {
     //----------------------------Attributes----------------------------
-    //: Main attribute ---------------------------
     String weaponName;
     WeaponType weaponType;
     int[] weaponLevel = {1, 2, 3}; //Wie in Spiel hat 3 Levels
-    //: Combat attribute -------------------------8o
     public double hitDamage;
     public double hitSpeed;
-    //: Shop --------------------------
     char c;
     public double zen;
     //: Simulation
