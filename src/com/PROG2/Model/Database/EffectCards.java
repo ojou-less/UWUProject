@@ -5,7 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 /**
  * Klasse für das zwischenspeichern der Objekte vom Typ EffectCard
- * vor der Speicherung.
+ * vor der Serialisierung.
  */
 public class EffectCards {
     private static ObservableList<EffectCard> effectCards = FXCollections.observableArrayList();

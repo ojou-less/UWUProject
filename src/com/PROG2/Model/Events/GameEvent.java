@@ -11,17 +11,25 @@ import java.util.Random;
  */
 public class GameEvent {
 
-    private ObservableList<Trader> trader = FXCollections.observableArrayList();
-    private int maxEventAmount = 3;
+    private ObservableList<Trader> trader = FXCollections.observableArrayList(); //ObservableList Instanz wird erzeugt
+    private int maxEventAmount = 3; //maximale Anzahl von möglichen Events
 
+    /**
+     * GameEvent konstruktor
+     * @param trader ObservableList
+     * @param maxEventAmount selbsterklärend
+     */
     public GameEvent(ObservableList<Trader> trader, int maxEventAmount) {
         this.trader = trader;
         this.maxEventAmount = maxEventAmount;
     }
 
+    /**
+     * Methode für das erzeugen eines von drei zufälligen GameEvents.
+     */
     public void randomEvent(){
-        int randy = (MyIO.random(0, 999999999)%3) + 1 ;
-
+        int randy = (MyIO.random(0, 999999999)% maxEventAmount) + 1 ;   //feld "randy" bekommt zufälligen int
+        //switch bekommt feld "randy" übergeben, um je nach case ein anderes GameEvent zu erzeugen
         switch(randy){
             case 1: System.out.println("event 1");
             case 2: System.out.println("event 2");

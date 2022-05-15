@@ -6,7 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 /**
  * Klasse für den Zwischenspeicher der Objekte vom Typ Weapon
- * vor der Speicherung.
+ * vor der Serialisierung.
  */
 public class Weapons {
     private static ObservableList<Weapon> weapons = FXCollections.emptyObservableList();

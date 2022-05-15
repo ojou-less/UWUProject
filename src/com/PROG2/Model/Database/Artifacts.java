@@ -5,7 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 /**
  * Klasse für das zwischenspeichern der Objekte vom Typ Artifact
- * vor der Speicherung.
+ * vor der Serialisierung.
  */
 public class Artifacts {
     private static ObservableList<Artifact> artifacts = FXCollections.observableArrayList();

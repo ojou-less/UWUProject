@@ -5,7 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 /**
  * Klasse für das zwischenspeichern der Objekte vom Typ WarriorCard
- * vor der Speicherung.
+ * vor der Serialisierung.
  */
 public class WarriorCards {
     private static ObservableList<SummonedWarriorCard> warriorCards = FXCollections.emptyObservableList();

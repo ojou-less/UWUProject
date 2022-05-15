@@ -39,10 +39,21 @@ public class Player implements Serializable {
         this.zen = zen;
     }
 
+    /**
+     * Methode für das hinzufügen eines Effektes zum Spieler.
+     * @param ability
+     * @return
+     */
     public Player addEffect(Ability ability){
         abilities.add(ability);
         return this;
     }
+
+    /**
+     * Methode für das Entfernen von Effekten vom Spieler.
+     * @param ability
+     * @return
+     */
     private Player delEffect(Ability ability){
         this.addHealth -= (this.health() * ability.increaseHealth());
         this.hitDamage -= (this.hitDamage() * ability.increaseDamage());
@@ -51,6 +62,12 @@ public class Player implements Serializable {
         this.addDrawLimit -= ability.increaseDrawLimit();
         return this;
     }
+
+    /**
+     * hilfe man was????????????
+     * @param ability
+     * @return
+     */
     private Player addingEffect(Ability ability){
         this.addHealth += (this.health() * ability.increaseHealth());
         this.hitDamage += (this.hitDamage() * ability.increaseDamage());
@@ -59,7 +76,7 @@ public class Player implements Serializable {
         this.addDrawLimit += ability.increaseDrawLimit();
         return this;
     }
-    public Player checkEffects(){
+    public Player checkEffects(){   //keine ahnung was diese Methode genau macht
         for (Ability ability:
                 abilities) {
             if(ability.timer()==0){
@@ -72,73 +89,145 @@ public class Player implements Serializable {
         return this;
     }
 
+    /**
+     * Getter für Level.
+     * @return level
+     */
     public double level() {
         return level;
     }
 
+    /**
+     * Setter für Level
+     * @param level
+     * @return level
+     */
     public Player setLevel(double level) {
         this.level = level;
         return this;
     }
 
+    /**
+     * Getter für Mana
+     * @return mana
+     */
     public double mana() {
         return mana+addMana;
     }
 
+    /**
+     * Setter für mana
+     * @param mana
+     * @return mana
+     */
     public Player setMana(double mana) {
         this.mana = mana;
         return this;
     }
 
+    /**
+     * Getter für Lebenspunkte
+     * @return health
+     */
     public double health() {
         return health+addHealth;
     }
 
+    /**
+     * Setter für Lebenspunkte
+     * @param health
+     * @return health
+     */
     public Player setHealth(double health) {
         this.health = health;
         return this;
     }
 
+    /**
+     * Getter für Hit Damage
+     * @return hitDamage
+     */
     public double hitDamage() {
         return hitDamage+addHitDamage;
     }
 
+    /**
+     * Setter für Hit Damage
+     * @param hitDamage
+     * @return hitDamage
+     */
     public Player setHitDamage(double hitDamage) {
         this.hitDamage = hitDamage;
         return this;
     }
 
+    /**
+     * Getter für Weapon
+     * @return weapon
+     */
     public Weapon weapon() {
         return weapon;
     }
 
+    /**
+     * Setter für Weapon
+     * @param weapon
+     * @return weapon
+     */
     public Player setWeapon(Weapon weapon) {
         this.weapon = weapon;
         return this;
     }
 
+    /**
+     * Getter für Armor
+     * @return armor
+     */
     public Armor armor() {
         return armor;
     }
 
+    /**
+     * Setter für Armor
+     * @param armor
+     * @return armor
+     */
     public Player setArmor(Armor armor) {
         this.armor = armor;
         return this;
     }
 
+    /**
+     * Getter für das erste Artefakt
+     * @return artifact01
+     */
     public Artifact artifact01() {
         return artifact01;
     }
 
+    /**
+     * Setter für das erste Artefakt
+     * @param artifact01
+     * @return artifact01
+     */
     public Player setArtifact01(Artifact artifact01) {
         this.artifact01 = artifact01;
         return this;
     }
 
+    /**
+     * Getter für das zweite Artefakt
+     * @return artifact02
+     */
     public Artifact artifact02() {
         return artifact02;
     }
 
+    /**
+     * Setter für das zweite Artefakt
+     * @param artifact02
+     * @return artifact02
+     */
     public Player setArtifact02(Artifact artifact02) {
         this.artifact02 = artifact02;
         return this;

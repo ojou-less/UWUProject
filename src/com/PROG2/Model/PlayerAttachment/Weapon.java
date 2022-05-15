@@ -6,9 +6,9 @@ import com.PROG2.Model.Database.Usable;
 import java.util.Random;
 
 /**
- * Klasse Weapon, erbt von Superklasse Usable, wird gebraucht um die Waffen zu erzeugen. Dazu auch die Mechanik von
- * unterschiedlichen Waffen wie Angriffsschaden und Trefferchance zu erzeugen.
+ * Klasse für die Erzeugung eines Weapon Objektes. Erbt von Usable da Weapon zu den vom Spieler nutzbaren Items gehört.
  */
+
 
 public class Weapon extends Usable {
     //----------------------------Attributes----------------------------

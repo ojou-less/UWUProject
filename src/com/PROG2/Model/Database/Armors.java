@@ -6,7 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 /**
  * Klasse für das zwischenspeichern der Objekte vom Typ Armor
- * vor der Speicherung.
+ * vor der Serialisierung.
  */
 public class Armors {
     private static ObservableList<Armor> armors = FXCollections.emptyObservableList();
