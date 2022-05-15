@@ -8,7 +8,7 @@ import java.io.*;
     bei weiteren zu speichernden objekten einfach hinzufügen
     und serializable implementieren
  */
-public class SaveData {
+public class SaveData implements Serializable {
 
     public void save(Player player) {
         File file = new File("C:\\spiel\\data.save");
