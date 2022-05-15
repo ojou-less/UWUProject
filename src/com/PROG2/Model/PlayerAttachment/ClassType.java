@@ -15,6 +15,7 @@ public class ClassType {
         this.ability = ability;
     }
 
+
     public String getName(){
         return name;
     }

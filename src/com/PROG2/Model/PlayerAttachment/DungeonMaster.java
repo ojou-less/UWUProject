@@ -27,7 +27,7 @@ public class DungeonMaster extends Player{
      * @return classesType
      */
     @Override
-    public ClassTypes getClassesType() {
+    public ClassType getClassesType() {
         return getClassesType();
     }
 
@@ -37,7 +37,7 @@ public class DungeonMaster extends Player{
      * @param classesType
      * @return classesType
      */
-    public Player setClassesType(ClassTypes classesType) {
+    public Player setClassesType(ClassType classesType) {
         this.setClassesType(classesType);
         return this;
     }
