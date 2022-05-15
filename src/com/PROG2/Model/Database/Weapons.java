@@ -5,7 +5,7 @@ import com.PROG2.Model.PlayerAttachment.WeaponType;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 /**
- * Klasse für das zwischenspeichern der Objekte vom Typ Weapon
+ * Klasse für den Zwischenspeicher der Objekte vom Typ Weapon
  * vor der Speicherung.
  */
 public class Weapons {
@@ -13,9 +13,9 @@ public class Weapons {
     // ----- List-Weapons
     // Swords
     private final static Weapon swordOne = new Weapon(400,"Iron Sword", WeaponType.SWORD,10, 1,50);
-    private final static Weapon swordTwo = new Weapon(401,"Magestic Sword", WeaponType.SWORD,15, 1, 200);
+    private final static Weapon swordTwo = new Weapon(401,"Majestic Sword", WeaponType.SWORD,15, 1, 200);
     private final static Weapon swordThree = new Weapon(402,"Ezclak", WeaponType.SWORD,14, 1, 180);
-    private final static Weapon swordFour = new Weapon(403,"Keine Ahnung", WeaponType.SWORD,20, 1, 666);
+    private final static Weapon swordFour = new Weapon(403,"Dungeon Excalibur", WeaponType.SWORD,20, 1, 666);
     // Bows 421-436
     private final static Weapon bowOne = new Weapon(421, "Classical Bow", WeaponType.BOW, 8, 1, 50);
     // Axes 437-457
@@ -42,6 +42,10 @@ public class Weapons {
         Weapons.weapons = weapons;
         return null;
     }
+
+    /**
+     * add() Methode speichert die Waffen, die in Attribute deklariert und initialisiert wurden.
+     */
     public static Weapons add(){
         weapons.add(swordOne);
         weapons.add(swordTwo);

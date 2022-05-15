@@ -5,6 +5,11 @@ import com.PROG2.Model.Database.Usable;
 
 import java.util.Random;
 
+/**
+ * Klasse Weapon, erbt von Superklasse Usable, wird gebraucht um die Waffen zu erzeugen. Dazu auch die Mechanik von
+ * unterschiedlichen Waffen wie Angriffsschaden und Trefferchance zu erzeugen.
+ */
+
 public class Weapon extends Usable {
     //----------------------------Attributes----------------------------
     //: Main attribute ---------------------------
@@ -19,6 +24,11 @@ public class Weapon extends Usable {
     public double zen;
     //: Simulation
 
+    /**
+     * Die Konstruktor Weapon erzeugt alle Information von einzelnen Waffen zur Klasse Database.Weapons.
+     * Darauf sind: Waffen-ID (Aus Klasse: Usable), Waffenname, Waffenart (Aus Enum-Klasse: WeaponType),
+     * Angriffsschaden, Trefferchance und dem Kaufpreis in Spiel-Währung "Zen".
+     */
     public Weapon(int ID, String weaponName, WeaponType weaponType, double hitDamage, double hitSpeed, double zen) {
         super(ID);
         this.weaponName = weaponName;
@@ -37,21 +47,17 @@ public class Weapon extends Usable {
     //---------------------------Methods--------------------------------
 
     /**
-     *
-     * @param weaponType
-     * @param hitDamage
-     * @param weaponLevel
-     * @param hitSpeed
-     *
      * Hier wird alle Hits von verschiedenen Waffen getrennt durch eine switch-case. Alle cases werden unterschiedliche
      * Hit-Methode aufgerufen.
      *
-     * Jeder Hit sollte ein bisschen stärker oder schwächer schlagen, einige sogar muss bestimmte Schlaggeschwindigkeit
-     * erreichen, wenn sie treffen wollen (Axe, Clubs). Je langsamer ist die Geschwindigkeit, desto höhere Chance der Gegner hat,
-     * die Hit ausweichen.
+     * Jeder Waffe sollte ein bisschen stärker oder schwächer schlagen, manchen Waffen müssen bestimmte Angriffsgeschwindigkeit
+     * erreichen, wenn sie treffen wollen (Die Waffen Axe und Schläger). Je langsamer ist die Angriffsgeschwindigkeit,
+     * desto höhere Chance der Gegner hat, der Angriff auszuweichen. Die Angriffsschäden und Angriffsgeschwindigkeiten
+     * sind Mithilfe von einer Random-Klasse erzeugt.
      *
-     * Bogen und Spear werden mit einem Range, Bogen haben bis 3 Blocken, Spear bis 2. Je nähe der Gegner ist, desto der Hit schwächer ist,
-     * aber hat höhere Chance zu treffen, je weiter der Gegner ist, desto weniger Chance hat, zu treffen, aber der Hit ist stärker.
+     * Bogen und Lanzen werden mit einem Range (Reichweite) erzeugt, Bogen haben bis 3 Blöcke Reichweite,
+     * Lanze bis 2 Blöcke. Je nähe der Gegner ist, desto der Angriff schwächer ist, aber hat höhere Chance zu treffen,
+     * je weiter der Gegner ist, desto weniger Chance hat, zu treffen, aber der Angriff ist stärker.
      */
     public void weaponHit(WeaponType weaponType, double hitDamage, int[] weaponLevel, double hitSpeed) {
         this.weaponType = weaponType;
@@ -77,12 +83,13 @@ public class Weapon extends Usable {
     }
 
     /**
+     * Das Schwert benötigt keine Trefferchance, je höher der Level einer Waffe hat, desto
+     * stärker die Angriffe sind.
      *
-     * @param hitDamage
-     * @param weaponLevel
-     *
-     * Das Schwert benötigt keine Trefferchance, weil sie immer treffen, je höher der Level einer Waffe hat, desto
-     * stärker die Hits sind.
+     * Die Angriffsschäden sind mit Random-Klasse erzeugt, sie versuchen bei jeder Angriff unterschiedlichen
+     * Hit-Punkte, zu erzeugen, ohne die grundsätzliche Angriffsschaden zu hoch unterscheiden.
+     * z.B: Iron Sword mit Waffen-Level 1 hat 10 Angriffsschaden,
+     * jeder Runde greif der Spieler zwischen 10 Hit-Damage und 16 Hit-Damage.
      */
     public void swordHit(double hitDamage, int[] weaponLevel) {
         this.hitDamage = hitDamage;
@@ -92,7 +99,7 @@ public class Weapon extends Usable {
          */
         for (int i = 0; i <= weaponLevel.length; i++) {
             int r1 = 1;
-            int r2 = (int) (r1 * 1.6);
+            double r2 = r1 * 1.6;
             Random randomDamage = new Random(r1);
             if (i == 1) {
                 hitDamage = hitDamage * randomDamage.nextDouble(r1, r2);
@@ -110,12 +117,9 @@ public class Weapon extends Usable {
     /**
      * Die axeHit-Methode gilt für Axe und Schläger, wie oben bei weaponHit und swordHit erklärt wurde, je höher
      * die Level einer Waffe hat, desto stärker die Hits sind. Aber auch jeder Hit kann höhere oder tiefere Trefferchance
-     * haben. Je tiefer der Trefferchance ist, desto der Gegner höhere Chance hat, dieser Hit auszuweichen.
-     * Sie haben aber stärkere hitDamage als ein Schwert.
+     * haben. Je tiefer der Trefferchance ist, desto höhere Chance der Gegner hat, dieser Hit auszuweichen.
+     * Sie haben aber stärkere Angriffsschaden als ein Schwert.
      *
-     * @param hitDamage
-     * @param weaponLevel
-     * @param hitSpeed
      */
 
     public void axeHit(double hitDamage, int[] weaponLevel, double hitSpeed) {
@@ -127,7 +131,7 @@ public class Weapon extends Usable {
          */
         for (int i = 0; i <= weaponLevel.length; i++) {
             int r1 = 1;
-            int r2 = (int) (r1 * 1.6);
+            double r2 = r1 * 1.6;
             Random randomHit = new Random(r1);
             if (i == 1) {
                 hitDamage = hitDamage * randomHit.nextDouble(r1, r2);
@@ -146,12 +150,8 @@ public class Weapon extends Usable {
     }
 
     /**
-     * Wie oben in weaponHit erklärt, Spear hat einen Range, also ein
-     *
-     * @param range
-     * @param hitDamage
-     * @param weaponLevel
-     * @param hitSpeed
+     * Wie oben in weaponHit erklärt, Lanze hat eine Reichweite bis 2 Blöcke. Level wird hier wie andere
+     * Waffen auch betrachtet.
      */
 
     public void spearHit(int range, double hitDamage, int[] weaponLevel, double hitSpeed) {
@@ -162,7 +162,7 @@ public class Weapon extends Usable {
         for(int s = 0; s <= range; s++) {
             for(int l = 0; l <= weaponLevel.length; l++) {
                 int r1 = 1;
-                int r2 = (int) (r1 * 1.6);
+                double r2 = r1 * 1.6;
                 Random random = new Random(r1);
                 // Range 1
                 if (s == 1 && l == 1) {
@@ -196,6 +196,9 @@ public class Weapon extends Usable {
         }
     }
 
+    /**
+     * Bogen haben immer 3 Blöcke Reichweite, wie in weaponHit-Methode kommentiert.
+     */
     public void bowHitSpeedRange(int range, double hitDamage, int[] weaponLevel, double hitSpeed) {
         this.hitDamage = hitDamage;
         this.weaponLevel = weaponLevel;
@@ -204,7 +207,7 @@ public class Weapon extends Usable {
         for(int s = 0; s <= range; s++) {
             for(int l = 0; l <= weaponLevel.length; l++) {
                 int r1 = 1;
-                int r2 = (int) (r1 * 1.6);
+                double r2 = r1 * 1.6;
                 Random random = new Random(r1);
                 // Range 1
                 if (s == 1 && l == 1) {
