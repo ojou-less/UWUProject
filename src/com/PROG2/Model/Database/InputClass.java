@@ -142,13 +142,22 @@ public class InputClass {
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] activeLine = line.split("-");
-            WarriorCards.add(new SummonedWarriorCard());//(int ID, double health, double hitDamage, double defense, int hitRange, int moveRange, boolean canSummon, int buyCost
+            WarriorCards.add(new SummonedWarriorCard(
+                    Integer.getInteger(activeLine[0]),
+                    Double.valueOf(activeLine[1]),
+                    Double.valueOf(activeLine[2]),
+                    Double.valueOf(activeLine[3]),
+                    Integer.getInteger(activeLine[4]),
+                    Integer.getInteger(activeLine[5]),
+                    Boolean.valueOf(activeLine[6]),
+                    Integer.getInteger(activeLine[7])
+            ));//(int ID, double health, double hitDamage, double defense, int hitRange, int moveRange, boolean canSummon, int buyCost
 
         }
     }
 
     public static void weapons() {
-
+        //TODO; after choice
     }
     // = new FileReader("input.txt", Charset.forName("UTF8"));
 }
