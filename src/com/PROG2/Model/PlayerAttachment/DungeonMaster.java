@@ -17,7 +17,7 @@ public class DungeonMaster extends Player{
      * @param drawLimit
      * @param zen
      */
-    public DungeonMaster(double level, double mana, double health, double hitDamage, ClassTypes classesType, int drawLimit, int zen) {
+    public DungeonMaster(double level, double mana, double health, double hitDamage, ClassType classesType, int drawLimit, int zen) {
         super(level, mana, health, hitDamage, classesType, drawLimit, zen);
     }
 
