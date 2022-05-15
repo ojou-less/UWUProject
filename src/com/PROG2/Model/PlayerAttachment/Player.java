@@ -1,6 +1,5 @@
 package com.PROG2.Model.PlayerAttachment;
 
-import com.PROG2.Model.Database.ClassTypes;
 import com.PROG2.Model.Database.Usable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
