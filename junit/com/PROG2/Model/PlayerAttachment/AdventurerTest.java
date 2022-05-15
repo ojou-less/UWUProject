@@ -12,13 +12,15 @@ class AdventurerTest {
     @Ignore
     void getClassesType() {
         Adventurer adventurer = new Adventurer(2.2, 3.3, 120.0, 20.3, new ClassType("advName", "advIcoPath", new Ability(1, 2, "der name", "der iconpath", 1.1, 1.2, 1.3, 1.4,4)), 10, 500);
-        //hmmm
+        adventurer.setClassesType(new ClassType("advName", "advIcoPath", new Ability(1, 2, "der name", "der iconpath", 1.1, 1.2, 1.3, 1.4,4)));
+        assertTrue(adventurer.getClassesType() != null);
     }
 
     @Test
     @Ignore
     void setClassesType() {
         Adventurer adventurer = new Adventurer(2.2, 3.3, 120.0, 20.3, new ClassType("advName", "advIcoPath", new Ability(1, 2, "der name", "der iconpath", 1.1, 1.2, 1.3, 1.4,4)), 10, 500);
-        //hmmm
+        adventurer.setClassesType(new ClassType("advName", "advIcoPath", new Ability(1, 2, "der name", "der iconpath", 1.1, 1.2, 1.3, 1.4,4)));
+        assertTrue(adventurer.getClassesType() != null);
     }
 }
