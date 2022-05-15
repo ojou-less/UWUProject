@@ -11,17 +11,16 @@ import java.util.Random;
  */
 public class GameEvent {
 
-    private ObservableList<Trader> trader = FXCollections.observableArrayList(); //ObservableList Instanz wird erzeugt
-    private int maxEventAmount = 3; //maximale Anzahl von möglichen Events
+    private Trader trader;
+    private ObservableList<Trader> traderlist = FXCollections.observableArrayList(); //ObservableList Instanz wird erzeugt
+    private final int maxEventAmount = 3; //maximale Anzahl von möglichen Events
 
     /**
      * GameEvent konstruktor
      * @param trader ObservableList
-     * @param maxEventAmount selbsterklärend
      */
-    public GameEvent(ObservableList<Trader> trader, int maxEventAmount) {
+    public GameEvent(Trader trader) {
         this.trader = trader;
-        this.maxEventAmount = maxEventAmount;
     }
 
     /**
