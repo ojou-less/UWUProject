@@ -8,16 +8,16 @@ public class OwnWeapon extends Usable {
     private int level;
     private double hit;
     private int range;
-    private int zen;
+    private int cost;
 
-    public OwnWeapon(int ID, String name, String iconPath, int level, double hit, int range, int zen) {
+    public OwnWeapon(int ID, String name, String iconPath, int level, double hit, int range, int cost) {
         super(ID);
         this.name = name;
         this.iconPath = iconPath;
         this.level = level;
         this.hit = hit;
         this.range = range;
-        this.zen = zen;
+        this.cost = cost;
     }
 
     public String name() {
@@ -48,7 +48,7 @@ public class OwnWeapon extends Usable {
     }
 
     public double hit() {
-        return hit+hit()*(level()*0.2);
+        return hit+(hit*(level()*0.2));
     }
 
     public OwnWeapon setHit(double hit) {
@@ -66,11 +66,11 @@ public class OwnWeapon extends Usable {
     }
 
     public int zen() {
-        return zen;
+        return cost;
     }
 
-    public OwnWeapon setZen(int zen) {
-        this.zen = zen;
+    public OwnWeapon setCost(int cost) {
+        this.cost = cost;
         return this;
     }
 }

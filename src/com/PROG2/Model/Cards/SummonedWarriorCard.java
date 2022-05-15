@@ -26,18 +26,16 @@ public class SummonedWarriorCard extends Usable {
      * @param health
      * @param hitDamage
      * @param defense
-     * @param abilities
      * @param hitRange
      * @param moveRange
      * @param canSummon
      * @param buyCost
      */
-    public SummonedWarriorCard(int ID, double health, double hitDamage, double defense, ObservableList<Ability> abilities, int hitRange, int moveRange, boolean canSummon, int buyCost) {
+    public SummonedWarriorCard(int ID, double health, double hitDamage, double defense, int hitRange, int moveRange, boolean canSummon, int buyCost) {
         super(ID);
         this.health = health;
         this.hitDamage = hitDamage;
         this.defense = defense;
-        this.abilities = abilities;
         this.hitRange = hitRange;
         this.moveRange = moveRange;
         this.canSummon = canSummon;
