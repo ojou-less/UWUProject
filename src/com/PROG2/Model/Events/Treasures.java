@@ -30,27 +30,27 @@ public class Treasures {
         if(player == 1){
             int zen = this.player01.zen();
             Deck deck = this.player01.cards();
-            ObservableList<Usable> inv = this.player01.intventory();
+            ObservableList<Usable> inv = this.player01.inventory();
 
             this.player01.setZen((zen + (random(0,100)*(int) this.player01.level())));
             deck.add(EffectCards.get(random(1, EffectCards.getEffectCards().size())-1));
             deck.add(WarriorCards.get(random(1, WarriorCards.warriorCards().size())-1));
             this.player01.setCards(deck);
-            this.player01.intventory().add(Weapons.get(random(1, Weapons.weapons().size())));
-            this.player01.intventory().add(Armors.get(random(1,Armors.armors().size())));
-            this.player01.intventory().add(Artifacts.get(random(1,Artifacts.artifacts().size())));
+            this.player01.inventory().add(Weapons.get(random(1, Weapons.weapons().size())));
+            this.player01.inventory().add(Armors.get(random(1,Armors.armors().size())));
+            this.player01.inventory().add(Artifacts.get(random(1,Artifacts.artifacts().size())));
         }else if(player == 2){
             int zen = this.player02.zen();
             Deck deck = this.player02.cards();
-            ObservableList<Usable> inv = this.player02.intventory();
+            ObservableList<Usable> inv = this.player02.inventory();
 
             this.player02.setZen((zen + (random(0,100)*(int) this.player02.level())));
             deck.add(EffectCards.get(random(1, EffectCards.getEffectCards().size())-1));
             deck.add(WarriorCards.get(random(1, WarriorCards.warriorCards().size())-1));
             this.player02.setCards(deck);
-            this.player02.intventory().add(Weapons.get(random(1, Weapons.weapons().size())));
-            this.player02.intventory().add(Armors.get(random(1,Armors.armors().size())));
-            this.player02.intventory().add(Artifacts.get(random(1,Artifacts.artifacts().size())));
+            this.player02.inventory().add(Weapons.get(random(1, Weapons.weapons().size())));
+            this.player02.inventory().add(Armors.get(random(1,Armors.armors().size())));
+            this.player02.inventory().add(Artifacts.get(random(1,Artifacts.artifacts().size())));
         }else{
             print("Wrong Input");
         }

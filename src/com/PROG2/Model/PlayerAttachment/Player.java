@@ -64,7 +64,7 @@ public class Player implements Serializable {
         return this;
     }
 
-    public ObservableList<Usable> intventory() {
+    public ObservableList<Usable> inventory() {
         return intventory;
     }
 
@@ -73,7 +73,7 @@ public class Player implements Serializable {
         return this;
     }
     public Player addInventory(Usable e){
-        this.intventory().add(e);
+        this.inventory().add(e);
         return this;
     }
 
@@ -259,6 +259,9 @@ public class Player implements Serializable {
 
     public int drawLimit() {
         return drawLimit + addDrawLimit;
+    }
+    public int addDrawLimit(){
+        return addDrawLimit;
     }
 
     public Player setDrawLimit(int drawLimit) {
