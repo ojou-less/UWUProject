@@ -5,11 +5,11 @@ import com.PROG2.Model.PlayerAttachment.Armor;
 import com.PROG2.Model.PlayerAttachment.Artifact;
 import com.PROG2.Model.PlayerAttachment.Deck;
 import com.PROG2.Model.PlayerAttachment.Weapon;
-import com.PROG2.Start;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 /**
+ * @author Niclas Rieckers
  * Klasse für den im Spiel zufällig erscheinenden Händler mit zufälligen Items, die gekauft werden können.
  */
 public class Trader {
@@ -31,7 +31,7 @@ public class Trader {
     }
 
     /**
-     * Methode für das befüllen des Shops des Händlers.
+     * Methode für das befüllen des Shops des Händlers mit den ID's die vorher uebergeben wurden.
      * @return
      */
     private Trader fillTrader() {

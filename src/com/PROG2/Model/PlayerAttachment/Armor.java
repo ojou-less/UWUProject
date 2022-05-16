@@ -1,7 +1,7 @@
 package com.PROG2.Model.PlayerAttachment;
 
-import com.PROG2.Model.Database.Usable;
 /**
+ * @author Niclas Rieckers
  * Klasse Armor, erbt von Superklasse Usable. Wird gebraucht, um Spiel-Objekte "Armor"
  * erzeugen zu können.
  */
@@ -31,7 +31,11 @@ public class Armor extends Usable {
         this.addHealth = addHealth;
         return this;
     }
-
+    /**
+     * toString() Rueckgabe von den Attributen
+     * @return String
+     * Hier werden die Attribute von der Warrior Karte zuruek gegeben.
+     */
     @Override
     public String toString() {
         return "Armor{" +

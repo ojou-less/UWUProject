@@ -1,8 +1,7 @@
 package com.PROG2.Model.PlayerAttachment;
 
-import com.PROG2.Model.Database.Usable;
-
 /**
+ * @author Niclas Rieckers
  * Klasse Ability, erbt von Superklasse Usable. Wird gebraucht, um Spiel-Objekte "Abilities"
  * erzeugen zu können.
  */
@@ -105,7 +104,11 @@ public class Ability extends Usable {
         this.increaseDrawLimit = increaseDrawLimit;
         return this;
     }
-
+    /**
+     * toString() Rueckgabe von den Attributen
+     * @return String
+     * Hier werden die Attribute von der Warrior Karte zuruek gegeben.
+     */
     @Override
     public String toString() {
         return "Ability{" +

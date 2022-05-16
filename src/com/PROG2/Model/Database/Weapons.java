@@ -4,6 +4,7 @@ import com.PROG2.Model.PlayerAttachment.Weapon;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 /**
+ * @author Niclas Rieckers
  * Klasse für den Zwischenspeicher der Objekte vom Typ Weapon
  * vor der Serialisierung.
  */

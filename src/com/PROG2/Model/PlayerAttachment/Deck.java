@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 
 import static com.PROG2.util.MyIO.*;
 /**
+ * @author Niclas Rieckers
  * Klasse Deck, mit der ein Kartendeck erzeugt werden kann.
  */
 public class Deck {
@@ -39,7 +40,11 @@ public class Deck {
     public void removeEffect(EffectCard e){
         effectCards.remove(effectCards.indexOf(e));
     }
-
+    /**
+     * toString() Rueckgabe von den Attributen
+     * @return String
+     * Hier werden die Attribute von der Warrior Karte zuruek gegeben.
+     */
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();

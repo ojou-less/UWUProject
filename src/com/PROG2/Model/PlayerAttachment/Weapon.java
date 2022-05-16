@@ -1,8 +1,9 @@
 package com.PROG2.Model.PlayerAttachment;
-
-import com.PROG2.Model.Database.Usable;
-
+/**
+ * @author Ali Herz
+ */
 public class Weapon extends Usable {
+
 
     private int level;
     private double hit;
@@ -52,7 +53,11 @@ public class Weapon extends Usable {
         this.cost = cost;
         return this;
     }
-
+    /**
+     * toString() Rueckgabe von den Attributen
+     * @return String
+     * Hier werden die Attribute von der Warrior Karte zuruek gegeben.
+     */
     @Override
     public String toString() {
         return "Weapon{" +

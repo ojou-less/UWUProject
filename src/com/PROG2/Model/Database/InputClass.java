@@ -7,6 +7,11 @@ import com.PROG2.Model.PlayerAttachment.*;
 import java.io.*;
 import java.util.Scanner;
 
+/**
+ * @author Niclas Rieckers
+ *
+ *
+ */
 
 public class InputClass {
     private static InputStreamReader abilities;
@@ -93,7 +98,7 @@ public class InputClass {
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] activeLine = line.split("-");
-            ClassTypes.add(new ClassType(
+            CharacterTypes.add(new CharacterType(
                     activeLine[0],
                     activeLine[1],
                     Abilities.get(Integer.valueOf(activeLine[3])%100-1)
@@ -155,7 +160,7 @@ public class InputClass {
                     Double.valueOf(activeLine[5]),
                     Integer.getInteger(activeLine[6]),
                     Integer.getInteger(activeLine[7]),
-                    Boolean.valueOf(activeLine[8]),
+                    Integer.valueOf(activeLine[8]),
                     Integer.getInteger(activeLine[9])
             ));//SummonedWarriorCard(int ID, String objName, String iconPath, double health, double hitDamage, double defense, int hitRange, int moveRange, boolean canSummon, int buyCost)
 

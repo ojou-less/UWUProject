@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 import java.util.Random;
 
 /**
+ * @author Mark Fisher
  * Klasse GameEvent für das generieren eines zufällig auftretenden Events im Spiel.
  */
 public class GameEvent {

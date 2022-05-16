@@ -5,6 +5,7 @@ import com.PROG2.Model.PlayerAttachment.Armor;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 /**
+ * @author Niclas Rieckers
  * Klasse für das zwischenspeichern der Objekte vom Typ Armor
  * vor der Serialisierung.
  */

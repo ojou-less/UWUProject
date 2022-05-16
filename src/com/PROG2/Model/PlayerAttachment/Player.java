@@ -1,12 +1,12 @@
 package com.PROG2.Model.PlayerAttachment;
 
-import com.PROG2.Model.Database.Usable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.Serializable;
 
 /**
+ * @author Niclas Rieckers
  * Superklasse für alle im Spiel vorhandenen spielbaren Charakter.
  */
 public class Player implements Serializable {
@@ -21,7 +21,7 @@ public class Player implements Serializable {
     private Armor armor;
     private Artifact artifact01;
     private Artifact artifact02;
-    private ClassType classesType;
+    private CharacterType classesType;
     private int drawLimit;
     private int addDrawLimit = 0;
     private Deck cards;
@@ -30,7 +30,7 @@ public class Player implements Serializable {
     private ObservableList<Usable> intventory = FXCollections.observableArrayList();
 
 
-    public Player(double level, double mana, double health, double hitDamage, ClassType classesType, int drawLimit, int zen) {
+    public Player(double level, double mana, double health, double hitDamage, CharacterType classesType, int drawLimit, int zen) {
         this.level = level;
         this.mana = mana;
         this.health = health;
@@ -248,11 +248,11 @@ public class Player implements Serializable {
         return this;
     }
 
-    public ClassType getClassesType() {
+    public CharacterType getClassesType() {
         return classesType;
     }
 
-    public Player setClassesType(ClassType classesType) {
+    public Player setClassesType(CharacterType classesType) {
         this.classesType = classesType;
         return this;
     }
@@ -295,7 +295,11 @@ public class Player implements Serializable {
         this.zen = zen;
         return this;
     }
-
+    /**
+     * toString() Rueckgabe von den Attributen
+     * @return String
+     * Hier werden die Attribute von der Warrior Karte zuruek gegeben.
+     */
     @Override
     public String toString() {
         return "Player{" +

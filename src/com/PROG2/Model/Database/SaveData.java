@@ -1,5 +1,7 @@
-package com.PROG2.Model.PlayerAttachment;
+package com.PROG2.Model.Database;
 
+
+import com.PROG2.Model.PlayerAttachment.Player;
 
 import java.io.*;
 
