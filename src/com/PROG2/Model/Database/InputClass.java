@@ -155,7 +155,7 @@ public class InputClass {
                     Double.valueOf(activeLine[5]),
                     Integer.getInteger(activeLine[6]),
                     Integer.getInteger(activeLine[7]),
-                    Boolean.valueOf(activeLine[8]),
+                    Integer.valueOf(activeLine[8]),
                     Integer.getInteger(activeLine[9])
             ));//SummonedWarriorCard(int ID, String objName, String iconPath, double health, double hitDamage, double defense, int hitRange, int moveRange, boolean canSummon, int buyCost)
 
