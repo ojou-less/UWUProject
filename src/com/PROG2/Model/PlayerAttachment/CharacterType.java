@@ -37,13 +37,17 @@ public class CharacterType {
     public void setAbility(Ability ability){
         this.ability = ability;
     }
-
+    /**
+     * toString() Rueckgabe von den Attributen
+     * @return String
+     * Hier werden die Attribute von der Warrior Karte zuruek gegeben.
+     */
     @Override
     public String toString() {
         return "CharacterType{" +
                 "name='" + name + '\'' +
                 ", iconpath='" + iconpath + '\'' +
-                ", cards=" + cards +
+                ", cards=" + cards.toString() +
                 ", ability=" + ability +
                 '}';
     }

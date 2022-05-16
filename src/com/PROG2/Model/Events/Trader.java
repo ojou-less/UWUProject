@@ -30,7 +30,7 @@ public class Trader {
     }
 
     /**
-     * Methode für das befüllen des Shops des Händlers.
+     * Methode für das befüllen des Shops des Händlers mit den ID's die vorher uebergeben wurden.
      * @return
      */
     private Trader fillTrader() {

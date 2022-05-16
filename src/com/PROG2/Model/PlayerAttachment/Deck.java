@@ -39,7 +39,11 @@ public class Deck {
     public void removeEffect(EffectCard e){
         effectCards.remove(effectCards.indexOf(e));
     }
-
+    /**
+     * toString() Rueckgabe von den Attributen
+     * @return String
+     * Hier werden die Attribute von der Warrior Karte zuruek gegeben.
+     */
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();

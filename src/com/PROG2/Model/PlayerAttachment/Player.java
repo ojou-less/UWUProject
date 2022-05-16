@@ -295,7 +295,11 @@ public class Player implements Serializable {
         this.zen = zen;
         return this;
     }
-
+    /**
+     * toString() Rueckgabe von den Attributen
+     * @return String
+     * Hier werden die Attribute von der Warrior Karte zuruek gegeben.
+     */
     @Override
     public String toString() {
         return "Player{" +

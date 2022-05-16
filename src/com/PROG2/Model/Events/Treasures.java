@@ -26,6 +26,12 @@ public class Treasures {
         this.player01 = player01;
         return this;
     }
+
+    /**
+     *
+     * @param player hire
+     * @return
+     */
     public Treasures luck(int player){
         if(player == 1){
             int zen = this.player01.zen();

@@ -31,7 +31,11 @@ public class Armor extends Usable {
         this.addHealth = addHealth;
         return this;
     }
-
+    /**
+     * toString() Rueckgabe von den Attributen
+     * @return String
+     * Hier werden die Attribute von der Warrior Karte zuruek gegeben.
+     */
     @Override
     public String toString() {
         return "Armor{" +

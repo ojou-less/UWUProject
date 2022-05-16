@@ -6,7 +6,7 @@ package com.PROG2.Model.PlayerAttachment;
  */
 public class Adventurer extends Player{
 
-//    private CharacterTypes adventurerClassesType;
+
     public Adventurer(double level, double mana, double health, double hitDamage, CharacterType classesType, int drawLimit, int zen) {
         super(level, mana, health, hitDamage, classesType, drawLimit, zen);
     }
