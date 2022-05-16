@@ -1,7 +1,7 @@
 package com.PROG2.Model.PlayerAttachment;
 
-import com.PROG2.Model.Database.Usable;
 /**
+ * @author Niclas Rieckers
  * Klasse Artifact, erbt von Superklasse Ability. Wird gebraucht, um Spiel-Objekte "Artifacts"
  * erzeugen zu können. Da Atrifact quasie wie Ability ist nur der Timer ist auf -1 um denn Effekt unendlich zu taetigen.
  */

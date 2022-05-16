@@ -1,5 +1,6 @@
 package com.PROG2.Model.PlayerAttachment;
 /**
+ * @author Mark Fischer
  * Klasse CharacterType, wird gebraucht, um Spiel-Objekte "CharacterTypes"
  * erzeugen zu können.
  */

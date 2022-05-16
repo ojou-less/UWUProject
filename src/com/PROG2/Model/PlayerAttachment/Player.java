@@ -1,12 +1,12 @@
 package com.PROG2.Model.PlayerAttachment;
 
-import com.PROG2.Model.Database.Usable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.io.Serializable;
 
 /**
+ * @author Niclas Rieckers
  * Superklasse für alle im Spiel vorhandenen spielbaren Charakter.
  */
 public class Player implements Serializable {

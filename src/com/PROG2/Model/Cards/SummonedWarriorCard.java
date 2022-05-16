@@ -1,11 +1,12 @@
 package com.PROG2.Model.Cards;
 
-import com.PROG2.Model.Database.Usable;
+import com.PROG2.Model.PlayerAttachment.Usable;
 import com.PROG2.Model.PlayerAttachment.Ability;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 /**
+ * @author Niclas Rieckers
  * Klasse fürs erzeugen eines SummonedWarriorCard Objektes. Erbt von Klasse Usable, da SummonedWarriorCard zu
  * den vom Spieler nutzbaren Items gehört.
  */

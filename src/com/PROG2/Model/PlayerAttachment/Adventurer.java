@@ -1,6 +1,7 @@
 package com.PROG2.Model.PlayerAttachment;
 
 /**
+ * @author Mark Fischer
  * Klasse für den Spielbaren Charakter "Adventurer". Erbt von Superklasse Player, genau wie der Spielbare
  * Chrakter "Dungeon Master". Adventurer unterscheidet sich von Dungeon Master in den Class Types.
  */

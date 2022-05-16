@@ -7,6 +7,11 @@ import com.PROG2.Model.PlayerAttachment.*;
 import java.io.*;
 import java.util.Scanner;
 
+/**
+ * @author Niclas Rieckers
+ *
+ *
+ */
 
 public class InputClass {
     private static InputStreamReader abilities;

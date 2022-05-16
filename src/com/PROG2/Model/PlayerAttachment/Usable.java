@@ -1,6 +1,7 @@
-package com.PROG2.Model.Database;
+package com.PROG2.Model.PlayerAttachment;
 
 /**
+ * @author Niclas Rieckers
  * Superklasse für alle vom Spieler nutzbare Items.
  */
 public class Usable {

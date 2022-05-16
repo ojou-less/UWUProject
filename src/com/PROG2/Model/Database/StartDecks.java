@@ -4,6 +4,7 @@ import com.PROG2.Model.PlayerAttachment.Deck;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 /**
+ * @author Niclas Rieckers
  * Klasse für das zwischenspeichern der Objekte vom Typ StartDeck
  * vor der Serialisierung.
  */

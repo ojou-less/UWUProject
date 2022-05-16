@@ -4,6 +4,7 @@ import com.PROG2.Model.Cards.SummonedWarriorCard;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 /**
+ * @author Niclas Rieckers
  * Klasse für das zwischenspeichern der Objekte vom Typ WarriorCard
  * vor der Serialisierung.
  */

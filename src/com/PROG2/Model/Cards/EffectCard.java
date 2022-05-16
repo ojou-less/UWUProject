@@ -1,9 +1,10 @@
 package com.PROG2.Model.Cards;
 
-import com.PROG2.Model.Database.Usable;
+import com.PROG2.Model.PlayerAttachment.Usable;
 import com.PROG2.Model.PlayerAttachment.Ability;
 
 /**
+ * @author Niclas Rieckers
  * Klasse für die erzeugung eines "EffectCard" Objektes. Erbt von Klasse Usable, da EffectCard zu den vom
  * Spieler nutzbaren Items gehört.
  */

@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 /**
+ *@author Niclas Rieckers
  * Klasse für das zwischenspeichern der Objekte vom Typ Ability
  * vor der Serialisierung.
  */

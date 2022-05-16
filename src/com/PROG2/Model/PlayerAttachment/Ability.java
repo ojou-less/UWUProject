@@ -1,8 +1,7 @@
 package com.PROG2.Model.PlayerAttachment;
 
-import com.PROG2.Model.Database.Usable;
-
 /**
+ * @author Niclas Rieckers
  * Klasse Ability, erbt von Superklasse Usable. Wird gebraucht, um Spiel-Objekte "Abilities"
  * erzeugen zu können.
  */

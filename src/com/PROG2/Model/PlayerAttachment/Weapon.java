@@ -1,8 +1,9 @@
 package com.PROG2.Model.PlayerAttachment;
-
-import com.PROG2.Model.Database.Usable;
-
+/**
+ * @author Ali Herz
+ */
 public class Weapon extends Usable {
+
 
     private int level;
     private double hit;

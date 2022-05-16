@@ -1,7 +1,7 @@
 package com.PROG2.Model.PlayerAttachment;
 
-import com.PROG2.Model.Database.Usable;
 /**
+ * @author Niclas Rieckers
  * Klasse Armor, erbt von Superklasse Usable. Wird gebraucht, um Spiel-Objekte "Armor"
  * erzeugen zu können.
  */

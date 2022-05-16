@@ -7,6 +7,7 @@ import javafx.collections.ObservableList;
 
 import static com.PROG2.util.MyIO.*;
 /**
+ * @author Niclas Rieckers
  * Klasse Deck, mit der ein Kartendeck erzeugt werden kann.
  */
 public class Deck {

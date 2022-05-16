@@ -4,11 +4,15 @@ import com.PROG2.Model.Database.*;
 import com.PROG2.Model.PlayerAttachment.Adventurer;
 import com.PROG2.Model.PlayerAttachment.Deck;
 import com.PROG2.Model.PlayerAttachment.DungeonMaster;
+import com.PROG2.Model.PlayerAttachment.Usable;
 import javafx.collections.ObservableList;
 
 import static com.PROG2.util.MyIO.print;
 import static com.PROG2.util.MyIO.random;
 
+/**
+ * @author Niclas Rieckers
+ */
 public class Treasures {
     private Adventurer player01;
     private DungeonMaster player02;
