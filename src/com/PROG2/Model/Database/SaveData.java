@@ -12,7 +12,7 @@ import java.io.*;
 public class SaveData implements Serializable {
 
     /**
-     * Methode zum Speichern des aktuellen Zustands von Player.
+     * Methode zum Speichern des aktuellen Zustands von Player
      * @param player das zu speichernde Objekt
      */
     public void save(Player player) {
