@@ -8,7 +8,7 @@ class ArmorTest {
 
     @Test
     void health() {
-        Armor armor = new Armor(5, "cringe armor", "cringe path", 17.17);
+        Armor armor = new Armor(5, "cringe armor", "cringe path", 6.66);
         assertTrue(armor.health() == 6.66);
     }
 
