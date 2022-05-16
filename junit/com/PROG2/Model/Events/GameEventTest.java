@@ -11,6 +11,6 @@ class GameEventTest {
     @Ignore
     void randomEvent() {
         GameEvent ge = new GameEvent(new Trader(new int[]{2,2,2,2,2}));
-        assertTrue(ge != null); //hi
+        assertTrue(ge != null);
     }
 }
