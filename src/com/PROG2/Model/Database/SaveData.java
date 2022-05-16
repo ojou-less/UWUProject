@@ -6,6 +6,7 @@ import com.PROG2.Model.PlayerAttachment.Player;
 import java.io.*;
 
 /**
+ * @author Tom Grape
     Ist noch ungetestet
     bei weiteren zu speichernden objekten einfach hinzufügen
     und serializable implementieren
