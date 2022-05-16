@@ -39,6 +39,6 @@ class TreasuresTest {
     void setPlayer02() {
         Treasures treasure = new Treasures(new Adventurer(2.2, 3.3, 120.0, 20.3, new CharacterType("advName", "advIcoPath", new Ability(1, 2, "der name", "der iconpath", 1.1, 1.2, 1.3, 1.4,4)), 10, 500), new DungeonMaster(3.2, 5.1, 90.0, 20.3, new CharacterType("advName", "advIcoPath", new Ability(1, 2, "der name", "der iconpath", 1.1, 1.2, 1.3, 1.4,4)), 10, 499));
         treasure.setPlayer02(new DungeonMaster(3.2, 5.1, 90.0, 20.3, new CharacterType("advName", "advIcoPath", new Ability(1, 2, "der name", "der iconpath", 1.1, 1.2, 1.3, 1.4,4)), 10, 499));
-        assertTrue(treasure.player01() != null);
+        assertTrue(treasure.player02() != null);
     }
 }
