@@ -17,6 +17,11 @@ public class Treasures {
     private Adventurer player01;
     private DungeonMaster player02;
 
+    /**
+     * Konstruktur der Klasse
+     * @param player01
+     * @param player02
+     */
     public Treasures(Adventurer player01, DungeonMaster player02) {
         this.player01 = player01;
         this.player02 = player02;
@@ -32,8 +37,10 @@ public class Treasures {
     }
 
     /**
-     *
-     * @param player hire
+     * Diese Methode befuellt den Player mit zufaelligen Items
+     * @param player
+     * 1=Adventurer
+     * 2=DungeonMaster
      * @return
      */
     public Treasures luck(int player){

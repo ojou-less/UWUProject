@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  * @author Niclas Rieckers
- *
+ * Diese Klassebefuellt die DataBase Klassen.
  *
  */
 
@@ -23,6 +23,11 @@ public class InputClass {
     private static InputStreamReader warriorCards;
     private static InputStreamReader weapons;
 
+    /**
+     *
+     * @return true
+     * if @return true fill is positiv
+     */
     public boolean inputFill(){
         boolean res = false;
         try{
@@ -41,6 +46,10 @@ public class InputClass {
         return res;
     }
 
+    /***
+     * Fuellt die Klasse abilities aus der Ability.txt
+     * @throws FileNotFoundException
+     */
     public static void abilities() throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("Ability.txt"));
         while (scanner.hasNextLine()) {
@@ -58,9 +67,12 @@ public class InputClass {
                     Integer.getInteger(activeLine[8])));
         }
     }
-
+    /***
+     * Fuellt die Klasse Armors aus der Armor.txt
+     * @throws FileNotFoundException
+     */
     public static void armors() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("filename"));
+        Scanner scanner = new Scanner(new File("Armor.txt"));
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String [] activeLine = line.split("-");
@@ -73,9 +85,12 @@ public class InputClass {
         }
 
     }
-
+    /***
+     * Fuellt die Klasse Artifacts aus der Artifact.txt
+     * @throws FileNotFoundException
+     */
     public static void artifacts() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("filename"));
+        Scanner scanner = new Scanner(new File("Artifact.txt"));
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] activeLine = line.split("-");
@@ -92,9 +107,12 @@ public class InputClass {
         }
 
     }
-
+    /***
+     * Fuellt die Klasse CharacterTypes aus der CharType.txt
+     * @throws FileNotFoundException
+     */
     public static void classTypes() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("filename"));
+        Scanner scanner = new Scanner(new File("CharType.txt"));
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] activeLine = line.split("-");
@@ -106,9 +124,12 @@ public class InputClass {
         }
 
     }
-
+    /***
+     * Fuellt die Klasse EffectCards aus der EffectCard.txt
+     * @throws FileNotFoundException
+     */
     public static void effectCards() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("filename"));
+        Scanner scanner = new Scanner(new File("EffectCard.txt"));
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] activeLine = line.split("-");
@@ -125,9 +146,12 @@ public class InputClass {
 
 
     }
-
+    /***
+     * Fuellt die Klasse StartDecks aus der StartDeck.txt
+     * @throws FileNotFoundException
+     */
     public static void startDecks() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("filename"));
+        Scanner scanner = new Scanner(new File("StartDeck.txt"));
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] activeLine = line.split("-");
@@ -145,9 +169,12 @@ public class InputClass {
             StartDecks.add(activeDeck);
         }
     }
-
+    /***
+     * Fuellt die Klasse WarriorCards aus der Warrior.txt
+     * @throws FileNotFoundException
+     */
     public static void warriorCards() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("filename"));
+        Scanner scanner = new Scanner(new File("Warrior.txt"));
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] activeLine = line.split("-");
@@ -166,9 +193,12 @@ public class InputClass {
 
         }
     }
-
+    /***
+     * Fuellt die Klasse Weapons aus der Weapon.txt
+     * @throws FileNotFoundException
+     */
     public static void weapons() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("filename"));
+        Scanner scanner = new Scanner(new File("Weapon.txt"));
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] activeLine = line.split("-");
