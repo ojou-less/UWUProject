@@ -93,7 +93,7 @@ public class InputClass {
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] activeLine = line.split("-");
-            ClassTypes.add(new ClassType(
+            CharacterTypes.add(new CharacterType(
                     activeLine[0],
                     activeLine[1],
                     Abilities.get(Integer.valueOf(activeLine[3])%100-1)

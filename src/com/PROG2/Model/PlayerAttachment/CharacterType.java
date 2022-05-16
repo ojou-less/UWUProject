@@ -1,15 +1,15 @@
 package com.PROG2.Model.PlayerAttachment;
 /**
- * Klasse ClassType, wird gebraucht, um Spiel-Objekte "ClassTypes"
+ * Klasse CharacterType, wird gebraucht, um Spiel-Objekte "CharacterTypes"
  * erzeugen zu können.
  */
-public class ClassType {
+public class CharacterType {
     private String name;
     private String iconpath;
     private Deck cards;
     private Ability ability;
 
-    public ClassType(String name, String iconpath, Ability ability) {
+    public CharacterType(String name, String iconpath, Ability ability) {
         this.name = name;
         this.iconpath = iconpath;
         this.ability = ability;
@@ -40,7 +40,7 @@ public class ClassType {
 
     @Override
     public String toString() {
-        return "ClassType{" +
+        return "CharacterType{" +
                 "name='" + name + '\'' +
                 ", iconpath='" + iconpath + '\'' +
                 ", cards=" + cards +

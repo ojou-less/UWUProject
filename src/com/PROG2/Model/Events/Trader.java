@@ -5,7 +5,6 @@ import com.PROG2.Model.PlayerAttachment.Armor;
 import com.PROG2.Model.PlayerAttachment.Artifact;
 import com.PROG2.Model.PlayerAttachment.Deck;
 import com.PROG2.Model.PlayerAttachment.Weapon;
-import com.PROG2.Start;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

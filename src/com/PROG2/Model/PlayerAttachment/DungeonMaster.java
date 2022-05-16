@@ -1,7 +1,6 @@
 package com.PROG2.Model.PlayerAttachment;
 
 
-import com.PROG2.Model.Database.ClassTypes;
 /**
  * Klasse für den Spielbaren Charakter "Dungeon Master" (auch Spieler 2). Erbt von Superklasse Player, genau wie der
  * Spielbare Chrakter "Adventurer". Dungeon Master unterscheidet sich von Adventurer in den Class Types.
@@ -17,7 +16,7 @@ public class DungeonMaster extends Player{
      * @param drawLimit
      * @param zen
      */
-    public DungeonMaster(double level, double mana, double health, double hitDamage, ClassType classesType, int drawLimit, int zen) {
+    public DungeonMaster(double level, double mana, double health, double hitDamage, CharacterType classesType, int drawLimit, int zen) {
         super(level, mana, health, hitDamage, classesType, drawLimit, zen);
     }
 
@@ -27,7 +26,7 @@ public class DungeonMaster extends Player{
      * @return classesType
      */
     @Override
-    public ClassType getClassesType() {
+    public CharacterType getClassesType() {
         return getClassesType();
     }
 
@@ -37,7 +36,7 @@ public class DungeonMaster extends Player{
      * @param classesType
      * @return classesType
      */
-    public Player setClassesType(ClassType classesType) {
+    public Player setClassesType(CharacterType classesType) {
         this.setClassesType(classesType);
         return this;
     }
