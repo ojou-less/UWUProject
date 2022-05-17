@@ -42,12 +42,10 @@ public class InputClass {
     }
 
     private static void fillRes() {
-        if(System.getProperty("os.name").equalsIgnoreCase("Windows 10")){
+        if (System.getProperty("os.name")=="Windows 10"){
             resourses = winResources;
-            System.out.println(resourses);
-        } else {
-            resourses = winResources;
-            System.out.println(resourses);
+        }else{
+            resourses = macResources;
         }
     }
 
