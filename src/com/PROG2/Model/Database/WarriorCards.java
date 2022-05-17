@@ -26,8 +26,7 @@ public class WarriorCards {
         WarriorCards.warriorCards = warriorCards;
         return null;
     }
-    public static WarriorCards add(SummonedWarriorCard summonedWarriorCard){
+    public static void add(SummonedWarriorCard summonedWarriorCard){
         warriorCards.add(summonedWarriorCard);
-        return null;
     }
 }

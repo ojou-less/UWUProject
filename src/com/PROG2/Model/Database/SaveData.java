@@ -6,6 +6,7 @@ import com.PROG2.Model.PlayerAttachment.Player;
 import java.io.*;
 
 /**
+ * @author Tom Grape
  * Klasse für das Speichern und Serialisieren des Zustands des Objekts "Player", sowie das
  * "Laden" eines Zustands aus persistentem Speicher.
  */

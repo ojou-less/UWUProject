@@ -27,8 +27,7 @@ public class Weapons {
     /**
      * add() Methode speichert die Waffen, die in Attribute deklariert und initialisiert wurden.
      */
-    public static Weapons add(Weapon e){
+    public static void add(Weapon e){
         Weapons.weapons.add(e);
-        return null;
     }
 }

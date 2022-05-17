@@ -12,9 +12,6 @@ import javafx.collections.ObservableList;
 public class Armors {
     private static ObservableList<Armor> armors = FXCollections.emptyObservableList();
 
-    public Armors() {
-        ;
-    }
 
     public static ObservableList<Armor> armors() {
         return armors;
@@ -29,8 +26,7 @@ public class Armors {
         return null;
     }
 
-    public static Armors add(Armor armor) {
-        armors.add(armor);
-        return null;
+    public static void add(Armor armor) {
+        armors().add(armor);
     }
 }
