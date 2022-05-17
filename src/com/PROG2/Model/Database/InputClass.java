@@ -14,7 +14,9 @@ import java.util.Scanner;
  */
 
 public class InputClass {
-    private static String resourses= System.getProperty("user.dir")+"\\src\\com\\Prog2\\Model\\Database\\";
+    private static String winResources = System.getProperty("user.dir") + "\\src\\com\\Prog2\\Model\\Database\\";
+    private static String macResources = System.getProperty("user.dir") + "/src/com/Prog2/Model/Database/";
+    private static String resourses;
     /**
      *
      * @return true
@@ -22,6 +24,7 @@ public class InputClass {
      */
     public static boolean inputFill(){
         boolean res = false;
+        fillRes();
         try{
             abilities();
             armors();
@@ -36,6 +39,16 @@ public class InputClass {
             ex.printStackTrace();
         }
         return res;
+    }
+
+    private static void fillRes() {
+        if(System.getProperty("os.name").equalsIgnoreCase("Windows 10")){
+            resourses = winResources;
+            System.out.println(resourses);
+        } else {
+            resourses = winResources;
+            System.out.println(resourses);
+        }
     }
 
     /***
