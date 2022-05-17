@@ -155,7 +155,7 @@ public class InputClass {
                 if (id>=0 && id<=99){
                     activeDeck.add(WarriorCards.get(id));
                 }else{
-                    activeDeck.add(EffectCards.get((id % 100)-1));
+                    activeDeck.add(EffectCards.get((id % 100)));
                 }
             }
             StartDecks.add(activeDeck);

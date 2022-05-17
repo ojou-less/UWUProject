@@ -38,7 +38,7 @@ public class Armor extends Usable {
      */
     @Override
     public String toString() {
-        return "Armor{" +
+        return "Armor{" +super.toString()+
                 "health=" + health +
                 ", addHealth=" + addHealth +
                 '}';

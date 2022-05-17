@@ -244,7 +244,7 @@ public class SummonedWarriorCard extends Usable {
      */
     @Override
     public String toString() {
-        return "SummonedWarriorCard{" +
+        return "SummonedWarriorCard{" +super.toString()+
                 "health=" + health +
                 ", hitDamage=" + hitDamage +
                 ", defense=" + defense +

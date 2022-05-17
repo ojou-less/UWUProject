@@ -109,7 +109,7 @@ public class EffectCard extends Usable {
      */
     @Override
     public String toString() {
-        return "EffectCard{" +
+        return "EffectCard{" +super.toString()+
                 "cardAbility=" + cardAbility.toString() +
                 ", buyCost=" + buyCost +
                 ", summonCost=" + summonCost +

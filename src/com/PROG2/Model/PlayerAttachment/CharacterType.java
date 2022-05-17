@@ -7,7 +7,6 @@ package com.PROG2.Model.PlayerAttachment;
 public class CharacterType {
     private String name;
     private String iconpath;
-    private Deck cards;
     private Ability ability;
 
     public CharacterType(String name, String iconpath, Ability ability) {
@@ -48,7 +47,6 @@ public class CharacterType {
         return "CharacterType{" +
                 "name='" + name + '\'' +
                 ", iconpath='" + iconpath + '\'' +
-                ", cards=" + cards.toString() +
                 ", ability=" + ability +
                 '}';
     }

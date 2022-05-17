@@ -9,7 +9,7 @@ import javafx.collections.ObservableList;
  * vor der Serialisierung.
  */
 public class Weapons {
-    private static ObservableList<Weapon> weapons = FXCollections.emptyObservableList();
+    private static ObservableList<Weapon> weapons = FXCollections.observableArrayList();
 
     public static ObservableList<Weapon> weapons() {
         return weapons;

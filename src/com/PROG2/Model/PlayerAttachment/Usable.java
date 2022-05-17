@@ -42,4 +42,13 @@ public class Usable {
         this.iconPath = iconPath;
         return this;
     }
+
+    @Override
+    public String toString() {
+        return
+                "ID=" + ID +
+                ", objName='" + objName + '\'' +
+                ", iconPath='" + iconPath + "\',"
+                ;
+    }
 }

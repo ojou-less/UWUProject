@@ -111,10 +111,7 @@ public class Ability extends Usable {
      */
     @Override
     public String toString() {
-        return "Ability{" +
-                "timer=" + timer +
-                ", name='" + name + '\'' +
-                ", iconPath='" + iconPath + '\'' +
+        return "Ability{" +super.toString()+
                 ", increaseHealth=" + increaseHealth +
                 ", increaseMana=" + increaseMana +
                 ", increaseDamage=" + increaseDamage +

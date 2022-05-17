@@ -10,7 +10,7 @@ import javafx.collections.ObservableList;
  * vor der Serialisierung.
  */
 public class Armors {
-    private static ObservableList<Armor> armors = FXCollections.emptyObservableList();
+    private static ObservableList<Armor> armors = FXCollections.observableArrayList();
 
 
     public static ObservableList<Armor> armors() {

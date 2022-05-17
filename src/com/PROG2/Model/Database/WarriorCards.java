@@ -9,7 +9,7 @@ import javafx.collections.ObservableList;
  * vor der Serialisierung.
  */
 public class WarriorCards {
-    private static ObservableList<SummonedWarriorCard> warriorCards = FXCollections.emptyObservableList();
+    private static ObservableList<SummonedWarriorCard> warriorCards = FXCollections.observableArrayList();
 
     public WarriorCards() {
     }

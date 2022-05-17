@@ -60,7 +60,7 @@ public class Weapon extends Usable {
      */
     @Override
     public String toString() {
-        return "Weapon{" +
+        return "Weapon{" + super.toString()+
                 "level=" + level +
                 ", hit=" + hit +
                 ", range=" + range +

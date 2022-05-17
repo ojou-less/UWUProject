@@ -32,13 +32,4 @@ public class Abilities {
         Abilities.effectList = effectList;
         return null;
     }
-
-    public static String info() {
-        StringBuilder builder = new StringBuilder();
-        for (Ability e:
-             effectList) {
-            builder.append(e.toString());
-        }
-        return "Abilities{"+builder.toString()+"}";
-    }
 }
